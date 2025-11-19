@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apunti — Maqueta</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Fuentes y variables */
+    :root{
+      --green:#3f9b7b;
+      --green-dark:#397f63;
+      --muted:#9aa6a0;
+      --card-shadow: 0 10px 30px rgba(16,24,32,0.07);
+    }
+    body{
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color:#0b0b0b;
+      background: linear-gradient(180deg, rgba(236,249,243,0.4) 0%, rgba(255,255,255,1) 30%);
+    }
+
+    /* NAV */
+    .top-nav{
+      padding: 28px 48px;
+      background: transparent;
+    }
+    .brand{
+      font-weight:700;
+      font-size:28px;
+      letter-spacing:0.4px;
+    }
+    .brand span.dot{
+      color:var(--green);
+    }
+    .nav-link{ color:#111; font-weight:500; }
+    .btn-login{
+      background:var(--green);
+      color:#fff;
+      border-radius:24px;
+      padding:8px 20px;
+      border: none;
+      box-shadow: 0 6px 18px rgba(63,155,123,0.12);
+    }
+
+    /* HERO */
+    .hero{
+      max-width:1200px;
+      margin: 30px auto 60px;
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow: 0 40px 80px rgba(16,24,32,0.08);
+      background-image: url('/mnt/data/Home.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 40px 160px;
+      color: white;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 70%);
+      mix-blend-mode: multiply;
+    }
+    .hero .hero-inner{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      max-width:920px;
+      margin:0 auto;
+    }
+    .hero h1{
+      font-size:48px;
+      line-height:1.05;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+    .hero p.lead{
+      color:rgba(255,255,255,0.9);
+      font-size:16px;
+      margin-bottom:30px;
+    }
+
+    /* Search pill over hero */
+    .search-pill{
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      bottom:-36px;
+      width:92%;
+      max-width:980px;
+      background:#fff;
+      border-radius:28px;
+      padding:14px 18px;
+      box-shadow: 0 20px 40px rgba(16,24,32,0.08);
+      z-index:3;
+    }
+    .search-pill .form-select,
+    .search-pill .btn{
+      border:0;
+      background:transparent;
+      box-shadow:none;
+    }
+    .search-pill .form-select:focus,
+    .search-pill .btn:focus{
+      outline: none;
+      box-shadow:none;
+    }
+    .search-pill .btn-search{
+      background: var(--green);
+      color: #fff;
+      border-radius: 22px;
+      padding: 8px 22px;
+      box-shadow: 0 10px 26px rgba(63,155,123,0.12);
+    }
+
+    /* Section: cómo usar */
+    .how-section{
+      margin-top:110px;
+      text-align:center;
+      padding: 70px 20px;
+    }
+    .how-section h2{
+      color:var(--green-dark);
+      font-size:34px;
+      font-weight:700;
+    }
+    .how-cards .card{
+      border-radius:16px;
+      box-shadow: var(--card-shadow);
+      border: none;
+      padding:20px;
+      min-height:180px;
+    }
+    .how-cards .card .title{
+      color:var(--green-dark);
+      font-weight:700;
+      margin-top:10px;
+    }
+    .how-cards .card p{ color:#7a7a7a; font-size:14px; }
+
+    /* GRID de resultados (segunda imagen) */
+    .results-wrap{
+      max-width:1200px;
+      margin: 80px auto;
+      padding: 0 24px 80px;
+    }
+    .filter-pill{
+      margin-bottom:40px;
+      background:#fff;
+      padding:14px;
+      border-radius:28px;
+      box-shadow: 0 20px 40px rgba(16,24,32,0.06);
+    }
+
+    .card-file{
+      border-radius:12px;
+      background:#bcd0c9aa;
+      min-height:150px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card-meta{
+      position:absolute;
+      left:10px;
+      right:10px;
+      bottom:-6px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      justify-content:flex-start;
+      background: #fff;
+      border-radius:10px;
+      padding:8px 12px;
+      box-shadow: 0 6px 18px rgba(16,24,32,0.06);
+      transform: translateY(12px);
+    }
+    .avatar{
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      background:#333;
+      overflow:hidden;
+    }
+    .meta-text{ font-size:13px; color:#222; font-weight:600; }
+    .meta-stats{ margin-left:auto; display:flex; gap:10px; color:#666; font-size:13px; align-items:center; }
+
+    /* Pagination similar look */
+    .pagination .page-link{
+      border-radius:50%;
+      width:36px;
+      height:36px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:none;
+      box-shadow:none;
+    }
+    .page-item.active .page-link{
+      background:var(--green);
+      color:#fff;
+    }
+
+    /* FOOTER */
+    footer.site-footer{
+      margin-top:60px;
+      padding:70px 40px;
+      background: linear-gradient(180deg, rgba(240,252,248,0.7), rgba(255,255,255,1));
+    }
+    .footer-logo{ font-size:28px; font-weight:700; }
+    .footer-mini{ color:#7a7a7a; font-size:14px; max-width:540px; }
+
+    /* Responsive tweaks */
+    @media (max-width: 991px){
+      .hero{ padding:80px 20px 120px; border-radius:20px; background-position: center center; }
+      .hero h1{ font-size:36px; }
+      .search-pill{ width:95%; bottom:-32px; }
+    }
+    @media (max-width:576px){
+      .top-nav{ padding:16px 20px; }
+      .hero{ padding:60px 14px 110px; }
+      .hero h1{ font-size:28px; }
+      .how-cards .card{ min-height:150px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="top-nav">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand">Apunt<span class="dot">i</span></div>
+      </div>
+
+      <nav class="d-none d-md-flex align-items-center gap-4">
+        <a class="nav-link" href="#">Inicio</a>
+        <a class="nav-link" href="#">Buscar material</a>
+        <a class="nav-link" href="#">Subir material</a>
+        <a class="nav-link" href="#">Mi perfil</a>
+        <button class="btn btn-login">Iniciar Sesión</button>
+      </nav>
+
+      <!-- mobile toggle -->
+      <div class="d-md-none">
+        <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Materiales de estudio,<br>hechos por estudiantes para estudiantes</h1>
+      <p class="lead">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.<br>Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
+    </div>
+
+    <!-- Search pill (overlapping) -->
+    <div class="search-pill">
+      <form class="row g-2 align-items-center">
+        <div class="col-6 col-md-3">
+          <select class="form-select" aria-label="Departamento">
+            <option selected>Departamento</option>
+            <option>Ingeniería</option>
+            <option>Ciencias</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-3">
+          <select class="form-select" aria-label="Carrera">
+            <option selected>Carrera</option>
+            <option>Tec. Universitario en Web</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-2">
+          <select class="form-select" aria-label="Materia">
+            <option selected>Materia</option>
+            <option>Visualización e Interfaces</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-2">
+          <select class="form-select" aria-label="Cátedra">
+            <option selected>Cátedra</option>
+            <option>02630</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-2 text-md-end">
+          <button class="btn btn-search btn-search">Buscar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Cómo usar la plataforma -->
+  <section class="how-section">
+    <div class="container">
+      <h2>Cómo usar la plataforma</h2>
+      <p style="color:#8b938f; max-width:720px; margin:10px auto 30px;">
+        Acá todo es simple: primero aportás, después accedés. La idea es construir una biblioteca que sirva para todos los que cursan como vos.
+      </p>
+
+      <div class="row how-cards gx-4 gy-4 mt-4">
+        <div class="col-12 col-md-3">
+          <div class="card text-center">
+            <div class="p-2"><div class="rounded-circle border d-inline-flex align-items-center justify-content-center" style="width:56px;height:56px;">👤</div></div>
+            <div class="title">Registrate</div>
+            <p>Creás tu cuenta con tu mail estudiantil en cuestión de segundos para visualizar tus aportes.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card text-center">
+            <div class="p-2"><div class="rounded-circle border d-inline-flex align-items-center justify-content-center" style="width:56px;height:56px;">🔍</div></div>
+            <div class="title">Buscá el material</div>
+            <p>Elegí Departamento → Carrera → Materia → Cátedra y encontrá material específico para tu cursada.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card text-center">
+            <div class="p-2"><div class="rounded-circle border d-inline-flex align-items-center justify-content-center" style="width:56px;height:56px;">⬆️</div></div>
+            <div class="title">Subí tu aporte</div>
+            <p>Para descargar, solo tenés que compartir un material tuyo. No tiene que ser perfecto, solo útil.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div class="card text-center">
+            <div class="p-2"><div class="rounded-circle border d-inline-flex align-items-center justify-content-center" style="width:56px;height:56px;">📚</div></div>
+            <div class="title">A estudiar!</div>
+            <p>Encontrá el material justo para tu materia y cátedra, sin confusiones ni contenido mezclado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados / Grid -->
+  <section class="results-wrap">
+    <div class="container">
+      <p class="text-muted small mb-3">Visualización e Interfaces / 1° Cuatrimestre / De Cicco, Juan</p>
+
+      <div class="filter-pill d-flex align-items-center justify-content-between">
+        <div class="d-flex gap-3 align-items-center flex-wrap">
+          <select class="form-select form-select-sm" style="width:180px;">
+            <option>Ingeniería</option>
+          </select>
+          <select class="form-select form-select-sm" style="width:220px;">
+            <option>Tec. Universitario en Web</option>
+          </select>
+          <select class="form-select form-select-sm" style="width:260px;">
+            <option>Visualización e Interfaces</option>
+          </select>
+          <select class="form-select form-select-sm" style="width:120px;">
+            <option>02630</option>
+          </select>
+        </div>
+
+        <div>
+          <button class="btn btn-search">Buscar</button>
+        </div>
+      </div>
+
+      <!-- grid cards -->
+      <div class="row g-4 mt-4">
+        <!-- repeat 12 placeholders to mimic the grid -->
+        <!-- Each column -->
+        <script>
+          /* Small helper: we'll render cards with JS to keep HTML shorter */
+        </script>
+
+        <!-- Static markup for 12 cards -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Visualización y mapeado</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 70</div>
+              <div title="views">👁 8.5k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Visualización II</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 188</div>
+              <div title="views">👁 9.8k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Miro, Leo, Pienso</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 45</div>
+              <div title="views">👁 4.2k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">UX/UI</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 365</div>
+              <div title="views">👁 34.5k</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- second row -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Leyes Gestalt</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 210</div>
+              <div title="views">👁 18.5k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Composición</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 85</div>
+              <div title="views">👁 5.6k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Resumen 1° parcial</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 161</div>
+              <div title="views">👁 21.7k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Visualización II</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 133</div>
+              <div title="views">👁 17.2k</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- third row -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Texto Miro, Leo, Pienso</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 78</div>
+              <div title="views">👁 13.8k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Evaluación Heurística</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 38</div>
+              <div title="views">👁 4k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">Visualización II</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 133</div>
+              <div title="views">👁 17.2k</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card-file"></div>
+          <div class="card-meta">
+            <div class="avatar"></div>
+            <div class="meta-text">UX/UI</div>
+            <div class="meta-stats">
+              <div title="likes">❤ 365</div>
+              <div title="views">👁 34.5k</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pagination -->
+      <div class="d-flex justify-content-center mt-5">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">…</a></li>
+            <li class="page-item"><a class="page-link" href="#">11</a></li>
+            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+      <div>
+        <div class="footer-logo">Apunt<span class="dot">i</span></div>
+        <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
+        Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
+      </div>
+
+      <div class="d-flex gap-4 align-items-start">
+        <div class="d-none d-md-block">
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Inicio</a></li>
+            <li><a href="#" class="text-decoration-none">Buscar apuntes</a></li>
+            <li><a href="#" class="text-decoration-none">Subir aporte</a></li>
+            <li><a href="#" class="text-decoration-none">Mi perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="align-self-end">
+          <div class="d-flex gap-2 small text-muted">
+            <span>✉</span> <span></span> <span></span> <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
