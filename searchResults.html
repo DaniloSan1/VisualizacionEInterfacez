@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscar - Apunti</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estiloHome.css">
+</head>
+<body>
+
+  <!-- NAV (misma que en home) -->
+  <header class="top-nav">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand">Apunt<span class="dot">i</span></div>
+      </div>
+
+      <nav class="d-none d-md-flex align-items-center gap-4">
+        <a class="nav-link" href="home.html">Inicio</a>
+        <a class="nav-link" href="#">Buscar material</a>
+        <a class="nav-link" href="#">Subir material</a>
+        <a class="nav-link" href="#">Mi perfil</a>
+        <a href="login.html" class="btn btn-login text-decoration-none">Iniciar Sesión</a>
+      </nav>
+
+      <div class="d-md-none">
+        <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <p class="breadcrumb-small">Ingeniería / Tec. Universitario en Web  / Visualización e Interfaces </p>
+
+    <!-- filtro grande -->
+    <div class="search-pill">
+      <select class="form-select form-select-sm">
+        <option>Ingeniería</option>
+        <option>Humanidades</option>
+      </select>
+
+      <select class="form-select form-select-sm">
+        <option>Tec. Universitario en Web</option>
+        <option>Lic. en Diseño</option>
+      </select>
+
+      <select class="form-select form-select-sm">
+        <option>Visualización e Interfaces</option>
+        <option>UX/UI</option>
+      </select>
+
+      <input class="form-control form-control-sm" placeholder="Codigo" style="max-width:120px">
+
+      <button class="btn btn-search">Buscar</button>
+    </div>
+  </div>
+
+  <!-- grid de resultados -->
+  <div class="container mt-4">
+    <div class="row g-4">
+      <!-- repetir 12 tarjetas como en la imagen -->
+      <!-- tarjeta -->
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Visualización y mapeado</div>
+              <div class="meta-stats"><span>70</span> <span>•</span> <span>8.5k</span></div>
+            </div>
+          </div>
+          <div class="meta-right">
+            <!-- pequeño icono de tipo -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#6e6e6e" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- clonar con variaciones -->
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Visualización II</div>
+              <div class="meta-stats"><span>188</span> <span>•</span> <span>9.8k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Miro, Leo, Pienso</div>
+              <div class="meta-stats"><span>—</span> <span>•</span> <span>—</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">UX/UI</div>
+              <div class="meta-stats"><span>365</span> <span>•</span> <span>34.5k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <!-- segunda fila -->
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Leyes Gestalt</div>
+              <div class="meta-stats"><span>210</span> <span>•</span> <span>18.5k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Composición</div>
+              <div class="meta-stats"><span>85</span> <span>•</span> <span>5.6k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Resumen 1° parcial</div>
+              <div class="meta-stats"><span>161</span> <span>•</span> <span>21.7k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Visualización II</div>
+              <div class="meta-stats"><span>133</span> <span>•</span> <span>17.2k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <!-- tercera fila -->
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Texto Miro, Leo, Pienso</div>
+              <div class="meta-stats"><span>78</span> <span>•</span> <span>13.8k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Evaluación Heurística</div>
+              <div class="meta-stats"><span>38</span> <span>•</span> <span>4k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="file-card"></div>
+        <div class="file-meta">
+          <div class="meta-left">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
+            <div>
+              <div class="title">Visualización II</div>
+              <div class="meta-stats"><span>133</span> <span>•</span> <span>17.2k</span></div>
+            </div>
+          </div>
+          <div class="meta-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- paginación -->
+    <div class="pagination-wrap">
+      <nav aria-label="Paginación">
+        <ul class="pagination pagination-sm">
+          <li class="page-item disabled"><a class="page-link">‹</a></li>
+          <li class="page-item active"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item"><a class="page-link">…</a></li>
+          <li class="page-item"><a class="page-link">11</a></li>
+          <li class="page-item"><a class="page-link">›</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- FOOTER (misma que en home) -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+      <div>
+        <div class="footer-logo">Apunt<span class="dot">i</span></div>
+        <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
+        Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
+      </div>
+
+      <div class="d-flex gap-4 align-items-start">
+        <div class="d-none d-md-block">
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Inicio</a></li>
+            <li><a href="#" class="text-decoration-none">Buscar apuntes</a></li>
+            <li><a href="#" class="text-decoration-none">Subir aporte</a></li>
+            <li><a href="#" class="text-decoration-none">Mi perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="align-self-end">
+          <div class="footer-social-wrap">
+            <img src="images/footer.png" alt="Redes sociales" class="footer-social-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle con Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

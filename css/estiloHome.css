@@ -206,6 +206,59 @@ body {
     display: block;
     filter: drop-shadow(0 6px 18px rgba(45,165,106,0.08));
 }
+.breadcrumb-small { color:#9aa; font-size:0.9rem; margin-top:18px; }
+    .search-pill {
+      margin: 36px 0;
+      background: #fff;
+      border-radius: 40px;
+      padding: 14px;
+      box-shadow: 0 10px 30px rgba(20,30,20,0.04);
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .search-pill .form-select, .search-pill .form-control {
+      border: none;
+      background: transparent;
+      min-width: 160px;
+      box-shadow: none;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .search-pill .form-select:focus, .search-pill .form-control:focus { outline: none; box-shadow: none; }
+    .search-pill .btn-search {
+      margin-left: auto;
+      background: #2da56a;
+      color: #fff;
+      border-radius: 24px;
+      padding: 8px 20px;
+      border: none;
+      box-shadow: 0 8px 26px rgba(45,165,106,0.12);
+    }
+
+    .file-card {
+      background: #aebfb8; /* placeholder color similar a la imagen */
+      height: 150px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .file-meta {
+      margin-top:8px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .meta-left { display:flex; align-items:center; gap:8px; }
+    .meta-left img.avatar { width:26px; height:26px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+    .meta-left .title { font-size:0.95rem; font-weight:600; color:#222; }
+    .meta-stats { color:#8a8a8a; font-size:0.85rem; display:flex; gap:8px; align-items:center; }
+    .pagination-wrap { display:flex; justify-content:center; margin:36px 0 80px; }
+    @media (max-width: 767.98px) {
+      .search-pill { flex-direction:column; gap:10px; padding:12px; border-radius:14px; }
+      .search-pill .btn-search { width:100%; margin-left:0; }
+      .file-card { height:120px; }
+    }
 
 /* tamaños para móvil */
 @media (max-width: 767.98px) {
@@ -215,4 +268,8 @@ body {
     .site-footer .container { flex-direction: column; }
     .footer-social-wrap { justify-content:flex-start; margin-top:8px; }
     .footer-social-img { height: 28px; }
+    .search-pill {
+    flex-wrap: wrap;
+    align-items: center;
+}
 }
