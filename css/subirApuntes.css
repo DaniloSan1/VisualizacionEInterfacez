@@ -233,3 +233,21 @@ body{
     .form-label { font-weight:600; }
     /* evitar overflow inesperado */
     html,body { overflow-x:hidden; }
+
+/* textarea de descripción: mejor visibilidad placeholder */
+.form-control-description {
+  background: #f9fafb;
+  border: 1px solid rgba(45,165,106,0.12);
+  padding: 14px 18px;
+}
+
+.form-control-description::placeholder {
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+.form-control-description:focus {
+  background: #fff;
+  border-color: rgba(45,165,106,0.22);
+  box-shadow: 0 8px 20px rgba(45,165,106,0.08);
+}
