@@ -1,0 +1,41 @@
+:root { --green: #2da56a; }
+
+/* evitar scroll horizontal */
+html, body { overflow-x: hidden; }
+
+/* centrado y espaciado principal */
+.confirm-icon { margin-top: 28px; }
+
+/* botones */
+.btn-outline-custom {
+  border: 1px solid rgba(45,165,106,0.18);
+  color: #345;
+  background: transparent;
+  padding: 12px 28px;
+  border-radius: 32px;
+  font-weight: 600;
+  box-shadow: none;
+}
+.btn-primary-custom {
+  background: var(--green);
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(45,165,106,0.12);
+  font-weight: 600;
+}
+
+/* tipografía y ancho del lead */
+.lead { max-width: 820px; margin: 0 auto; }
+
+/* ajustes responsive */
+@media (max-width: 575.98px) {
+  .confirm-icon svg { width: 88px; height: 88px; }
+  .display-5 { font-size: 1.6rem; }
+  .lead { padding: 0 12px; font-size: 0.98rem; }
+  .btn-outline-custom, .btn-primary-custom { width: 100%; max-width: 360px; }
+}
+
+/* footer spacing safe */
+.site-footer { padding-top: 40px; }

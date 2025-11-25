@@ -1,0 +1,206 @@
+:root{
+  --green:#2da56a;
+  --muted:#9aa0a6;
+  --card-shadow: 0 20px 40px rgba(17,24,39,0.06);
+  --soft-shadow: 0 12px 30px rgba(3,10,18,0.06);
+  --radius: 22px;
+  --body-bg: #ffffff;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--body-bg);
+  color: #111827;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* HEADER */
+.site-header{
+  background: #fff;
+  border-bottom: 1px solid rgba(15,23,42,0.04);
+}
+.brand{ color:#0b0b0b; }
+.brand span{ color:var(--green); }
+
+.nav-link{
+  color:#111827;
+  opacity:0.9;
+  font-weight:500;
+}
+.nav-link.active{ color:var(--green); }
+
+/* login button */
+.btn-login{
+  background: var(--green);
+  color:#fff;
+  border-radius: 24px;
+  padding: 8px 18px;
+  border: none;
+  font-weight:600;
+}
+
+/* MAIN */
+.main-content{ padding-bottom: 40px; }
+
+/* PROGRESS STEPS */
+.progress-steps{
+  position:relative;
+  padding: 18px 0 10px;
+}
+
+.progress-steps .step{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  flex:1;
+  position:relative;
+}
+
+.progress-steps .line{
+  height:2px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03));
+  flex: 0 0 230px; /* aumentado de 70px a 140px para hacer la línea más larga */
+  margin: 0 18px;
+  border-radius:2px;
+  align-self:center;
+}
+
+.progress-steps .line.active {
+  background: linear-gradient(90deg, var(--green), rgba(45,165,106,0.7));
+  box-shadow: 0 6px 18px rgba(45,165,106,0.12);
+  border-radius: 4px;
+  margin: 0 18px;
+  flex: 0 0 230px; /* mantener el mismo ancho cuando está activa */
+}
+
+.progress-steps .dot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#efefef;
+  border:2px solid rgba(0,0,0,0.06);
+  margin-bottom:10px;
+}
+
+.progress-steps .step.active .dot{
+  background:var(--green);
+  border-color:var(--green);
+  box-shadow: 0 6px 18px rgba(45,165,106,0.18);
+}
+
+.progress-steps .label{
+  font-size:1.05rem;
+  color:#6b7280;
+  margin-top:6px;
+}
+
+.progress-steps .label.muted{ color:#a3a3a8; }
+
+.progress-steps .step.active .label {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* UPLOAD CARD */
+.upload-card{
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: var(--card-shadow);
+  padding: 36px 36px;
+  border: 1px solid rgba(12,18,23,0.03);
+}
+
+.card-title{ font-size:1.85rem; }
+
+/* DROPZONE BOX */
+.dropzone{
+  height:180px;
+  border-radius: 16px;
+  border: 2px dashed rgba(140,152,170,0.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: #fafafb;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--soft-shadow);
+}
+
+/* simple upload icon */
+.upload-icon{
+  font-size:48px;
+  color:#4b5563;
+  opacity:0.95;
+}
+
+/* FOOTER */
+.site-footer{
+  position:relative;
+  overflow:hidden;
+  margin-top:80px;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,255,250,0.6) 60%);
+  color:#0f1720;
+}
+
+/* footer content */
+.brand-footer{ color:#0b0b0b; }
+.footer-desc{ max-width:420px; color:#6b7280; }
+
+/* right links */
+.footer-links li{ margin-bottom:8px; }
+.footer-links a{ color:#111827; text-decoration:none; font-weight:500; }
+
+/* social icons */
+.socials .social{
+  display:inline-block;
+  margin-left:8px;
+  color:var(--green);
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* separator */
+.footer-sep{
+  border: none;
+  height:1px; 
+  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02));
+  margin-top:22px;
+}
+
+/* decorative footer background: usamos la imagen subida como textura,
+   la ruta local que usaste: /mnt/data/Subir apunte 1 desktop.jpg */
+.footer-bg{
+  position:absolute;
+  left:-10%;
+  bottom:-20%;
+  width:70%;
+  height:60%;
+  background-image: url('/mnt/data/Subir apunte 1 desktop.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(26px) saturate(0.8) brightness(0.9);
+  opacity: 0.55;
+  transform: rotate(-6deg) scale(1.05);
+  z-index:0;
+  pointer-events:none;
+}
+
+/* asegurar que el contenido del footer esté encima */
+.site-footer > .container{ position:relative; z-index:2; }
+
+/* RESPONSIVE */
+@media (max-width: 767px){
+  .nav{ display:none !important; }
+  .progress-steps .line{ display:none; }
+  .progress-steps .step{ flex: 1 0 auto; }
+  .dropzone{ height:160px; }
+  .card-title{ font-size:1.5rem; }
+  .footer-links{ display:none; }
+}
+.form-left .file-badge { font-size:1rem; }
+    .form-label { font-weight:600; }
+    /* evitar overflow inesperado */
+    html,body { overflow-x:hidden; }
