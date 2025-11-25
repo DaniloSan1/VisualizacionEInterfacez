@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mapa Unidad 2 – Interfaces · Apunti</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estiloHome.css">
+    <link rel="stylesheet" href="css/detalleApunte.css">
+</head>
+<body>
+
+  <!-- NAV (igual que home) -->
+  <header class="top-nav">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand">Apunt<span class="dot">i</span></div>
+      </div>
+
+      <nav class="d-none d-md-flex align-items-center gap-4">
+        <a class="nav-link" href="home.html">Inicio</a>
+        <a class="nav-link" href="searchResults.html">Buscar material</a>
+        <a class="nav-link active" href="searchResults.html">Subir material</a>
+        <a class="nav-link" href="perfil.html">Mi perfil</a>
+        <a href="login.html" class="btn btn-login text-decoration-none">Iniciar Sesión</a>
+      </nav>
+
+      <div class="d-md-none">
+        <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <p class="breadcrumb-small">Inicio / Buscar Material / Ingeniería / Tec. Universitario en Web / Visualización e Interfaces / Apuntes / <strong>Mapa Unidad 2</strong></p>
+
+    <div class="row g-4 align-items-start mt-3">
+      <div class="col-12 col-md-6">
+        <div class="preview-card">
+          <!-- aquí puede ir un iframe PDF o una imagen; por ahora mock -->
+          <div class="file-preview">
+            MAPA UNIDAD 2 – Interfaces
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <h1 class="detail-title">Mapa Unidad 2 – Interfaces</h1>
+        <p class="text-muted mb-3">Resumen completo de la teórica + ejemplos vistos en clase.</p>
+
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <div class="small text-muted">👍 70</div>
+          <div class="small text-muted">⬇ 80</div>
+          <div class="small text-muted">👤 Rosario Fernández</div>
+        </div>
+
+        <dl class="row meta-list">
+          <dt class="col-5">Departamento:</dt><dd class="col-7">Ingeniería</dd>
+          <dt class="col-5">Carrera:</dt><dd class="col-7">Tec. Universitario en Web</dd>
+          <dt class="col-5">Materia:</dt><dd class="col-7">Visualización e Interfaces</dd>
+          <dt class="col-5">Comisión:</dt><dd class="col-7">COM1920</dd>
+          <dt class="col-5">Tipo de material:</dt><dd class="col-7">Apunte</dd>
+          <dt class="col-5">Fecha de subida:</dt><dd class="col-7">13/02/2025</dd>
+        </dl>
+
+        <div class="mt-4">
+          <a class="download-btn" href="files/MapaUnidad2.pdf" download aria-label="Descargar Mapa Unidad 2">Descargar</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (igual que home) -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
+      <div>
+        <div class="footer-logo">Apunt<span class="dot">i</span></div>
+        <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
+        Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
+      </div>
+
+      <div class="d-flex gap-4 align-items-start">
+        <div class="d-none d-md-block">
+          <ul class="list-unstyled">
+            <li><a href="home.html" class="text-decoration-none">Inicio</a></li>
+            <li><a href="searchResults.html" class="text-decoration-none">Buscar apuntes</a></li>
+            <li><a href="subirApuntes.html" class="text-decoration-none">Subir aporte</a></li>
+            <li><a href="perfil.html" class="text-decoration-none">Mi perfil</a></li>
+          </ul>
+        </div>
+
+        <div class="align-self-end">
+          <div class="footer-social-wrap">
+            <img src="images/footer.png" alt="Redes sociales" class="footer-social-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
