@@ -41,6 +41,35 @@ body{
   font-weight:600;
 }
 
+/* botón Siguiente específico */
+.btn-next{
+  background: var(--green);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(45,165,106,0.12);
+  border: none;
+}
+
+/* variante deshabilitada (si necesitás controlar estado) */
+.btn-next.disabled,
+.btn-next[aria-disabled="true"],
+.btn-next:disabled {
+  opacity: 0.55;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* responsive: ocupar ancho en móviles */
+@media (max-width: 575.98px){
+  .btn-next { width: 100%; max-width: 360px; }
+}
+
 /* MAIN */
 .main-content{ padding-bottom: 40px; }
 
