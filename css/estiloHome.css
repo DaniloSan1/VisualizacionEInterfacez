@@ -206,34 +206,58 @@ body {
     display: block;
     filter: drop-shadow(0 6px 18px rgba(45,165,106,0.08));
 }
-.breadcrumb-small { color:#9aa; font-size:0.9rem; margin-top:18px; }
+.breadcrumb-small { color:rgb(130, 139, 139); font-size:0.9rem; margin-top:18px; }
     .search-pill {
-      margin: 36px 0;
+      margin: 36px auto;
       background: #fff;
       border-radius: 40px;
-      padding: 14px;
-      box-shadow: 0 10px 30px rgba(20,30,20,0.04);
-      display:flex;
-      gap:12px;
-      align-items:center;
+      padding: 14px 20px;
+      box-shadow: 0 12px 36px rgba(45,165,106,0.12);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      border: 1px solid rgba(45,165,106,0.08);
+      max-width: 1200px; /* alargado en desktop */
     }
-    .search-pill .form-select, .search-pill .form-control {
-      border: none;
-      background: transparent;
-      min-width: 160px;
+
+    .search-pill .form-select, 
+    .search-pill .form-control {
+      border: 1px solid rgba(45,165,106,0.15);
+      background: rgba(45,165,106,0.04);
+      flex: 1 1 140px; /* crece proporcionalmente */
+      min-width: 130px;
       box-shadow: none;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
     }
-    .search-pill .form-select:focus, .search-pill .form-control:focus { outline: none; box-shadow: none; }
+
+    .search-pill .form-select:focus, 
+    .search-pill .form-control:focus { 
+      outline: none; 
+      box-shadow: 0 6px 16px rgba(45,165,106,0.12);
+      background: rgba(45,165,106,0.06);
+      border-color: rgba(45,165,106,0.25);
+    }
+
     .search-pill .btn-search {
       margin-left: auto;
       background: #2da56a;
       color: #fff;
       border-radius: 24px;
-      padding: 8px 20px;
+      padding: 10px 28px;
       border: none;
-      box-shadow: 0 8px 26px rgba(45,165,106,0.12);
+      box-shadow: 0 10px 28px rgba(45,165,106,0.15);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .search-pill .btn-search:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(45,165,106,0.2);
     }
 
     .file-card {
@@ -242,34 +266,227 @@ body {
       border-radius: 10px;
       overflow: hidden;
     }
-    .file-meta {
-      margin-top:8px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      justify-content:space-between;
-    }
-    .meta-left { display:flex; align-items:center; gap:8px; }
-    .meta-left img.avatar { width:26px; height:26px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
-    .meta-left .title { font-size:0.95rem; font-weight:600; color:#222; }
-    .meta-stats { color:#8a8a8a; font-size:0.85rem; display:flex; gap:8px; align-items:center; }
-    .pagination-wrap { display:flex; justify-content:center; margin:36px 0 80px; }
-    @media (max-width: 767.98px) {
-      .search-pill { flex-direction:column; gap:10px; padding:12px; border-radius:14px; }
-      .search-pill .btn-search { width:100%; margin-left:0; }
-      .file-card { height:120px; }
+    .file-card-link { 
+      display: block;
+      text-decoration: none;
     }
 
-/* tamaños para móvil */
-@media (max-width: 767.98px) {
-    .top-nav .brand { font-size: 1.15rem; }
-    .top-nav nav { display: none !important; }
-    .site-footer { padding: 30px 0; }
-    .site-footer .container { flex-direction: column; }
-    .footer-social-wrap { justify-content:flex-start; margin-top:8px; }
-    .footer-social-img { height: 28px; }
-    .search-pill {
-    flex-wrap: wrap;
-    align-items: center;
+.file-card-pdf {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #2d2d2d;
+  margin-bottom: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  width: 100%;
 }
+
+.pdf-toolbar {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #3a3a3a;
+  flex-wrap: wrap;
+}
+
+.pdf-nav, .pdf-page, .pdf-tools {
+  flex: 0 0 auto;
+}
+
+.pdf-content {
+  background: #e6efea;
+  color: #456;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 16px;
+  line-height: 1.4;
+  word-break: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-meta {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.meta-left { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.meta-left img.avatar { 
+  width: 26px; 
+  height: 26px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.meta-left > div {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.meta-left .title { 
+  font-size: 0.95rem; 
+  font-weight: 600; 
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta-stats { 
+  color: #8a8a8a; 
+  font-size: 0.85rem; 
+  display: flex; 
+  gap: 8px; 
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pagination-wrap { 
+  display: flex; 
+  justify-content: center; 
+  margin: 36px 0 80px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pagination { flex-shrink: 0; }
+
+/* RESPONSIVE: Tablet */
+@media (max-width: 991.98px) {
+  .search-pill {
+    margin: 28px auto;
+    padding: 12px 16px;
+    gap: 10px;
+    max-width: 100%;
+  }
+  
+  .search-pill .form-select,
+  .search-pill .form-control {
+    flex: 1 1 120px;
+    min-width: 110px;
+    font-size: 0.9rem;
+    padding: 9px 12px;
+  }
+  
+  .search-pill .btn-search {
+    padding: 9px 22px;
+    font-size: 0.95rem;
+  }
+
+  .pdf-content {
+    height: 160px;
+    font-size: 0.9rem;
+  }
+}
+
+/* RESPONSIVE: Mobile */
+@media (max-width: 767.98px) {
+  .search-pill {
+    flex-direction: row; /* mantener fila */
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 28px;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  .search-pill .form-select,
+  .search-pill .form-control {
+    flex: 1 1 80px; /* más pequeño pero mantiene forma */
+    min-width: 70px;
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .search-pill .btn-search {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin-left: 4px;
+  }
+
+  .pdf-content {
+    height: 140px;
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .pdf-toolbar {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .file-meta {
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .meta-left img.avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .meta-left .title {
+    font-size: 0.9rem;
+  }
+
+  .meta-stats {
+    font-size: 0.8rem;
+  }
+}
+
+/* RESPONSIVE: Móvil pequeño */
+@media (max-width: 480px) {
+  .search-pill {
+    padding: 8px 10px;
+    gap: 6px;
+    margin: 16px auto;
+    border-radius: 24px;
+  }
+
+  .search-pill .form-select,
+  .search-pill .form-control {
+    flex: 1 1 60px; /* aún más pequeño */
+    min-width: 55px;
+    padding: 7px 8px;
+    font-size: 0.8rem;
+  }
+
+  .search-pill .btn-search {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+    margin-left: 2px;
+  }
+
+  .pdf-content {
+    height: 120px;
+    font-size: 0.8rem;
+  }
+
+  .meta-left .title {
+    font-size: 0.85rem;
+  }
 }

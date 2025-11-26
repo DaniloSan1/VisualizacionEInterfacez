@@ -82,22 +82,35 @@
       <div class="row justify-content-center">
         <div class="col-11 col-md-10">
           <div class="review-card">
-            <h3>Mapa Unidad 2 – Interfaces</h3>
-            <p class="lead">Resumen completo de la teórica + ejemplos vistos en clase.</p>
+            <div class="review-card-inner">
+              <!-- izquierda: preview PDF (desktop: izq, mobile: arriba) -->
+              <div class="col-12 col-md-5">
+                <div class="preview-box" aria-hidden="true"></div>
+              </div>
 
-            <dl class="review-list row">
-              <dt class="col-4">Archivo:</dt><dd class="col-8">Mapeado.pdf</dd>
-              <dt class="col-4">Departamento:</dt><dd class="col-8">Ingeniería</dd>
-              <dt class="col-4">Carrera:</dt><dd class="col-8">Tec. Universitario en Web</dd>
-              <dt class="col-4">Materia:</dt><dd class="col-8">Visualización e interfaces</dd>
-              <dt class="col-4">Comisión:</dt><dd class="col-8">COM1920</dd>
-              <dt class="col-4">Tipo de material:</dt><dd class="col-8">Apunte</dd>
-            </dl>
+              <!-- derecha: título, descripción y metadatos -->
+              <div class="col-12 col-md-7">
+                <h3 class="mb-2">Mapa Unidad 2 – Interfaces</h3>
+                <p class="text-muted mb-3 desc">
+                  Resumen completo de la teórica + ejemplos vistos en clase. Resumen completo de la teórica + ejemplos vistos en clase. Resumen completo de la teórica + ejemplos vistos en clase.
+                </p>
 
-            <div class="review-actions">
-              <a href="subirApunteDetalle.html" class="btn-outline-edit">Editar</a>
-              <a href="subirApunteCompleto.html" class="btn-publish">Publicar</a>
+                <dl class="review-list row mb-0">
+                  <dt class="col-4">Archivo:</dt><dd class="col-8">Mapeado.pdf</dd>
+                  <dt class="col-4">Departamento:</dt><dd class="col-8">Ingeniería</dd>
+                  <dt class="col-4">Carrera:</dt><dd class="col-8">Tec. Universitario en Web</dd>
+                  <dt class="col-4">Materia:</dt><dd class="col-8">Visualización e interfaces</dd>
+                  <dt class="col-4">Comisión:</dt><dd class="col-8">COM1920</dd>
+                  <dt class="col-4">Tipo de material:</dt><dd class="col-8">Apunte</dd>
+                </dl>
+              </div>
             </div>
+          </div>
+
+          <!-- botones: Volver (izq) y Finalizar (der) fuera de la tarjeta como en la imagen -->
+          <div class="action-row mt-4">
+            <a href="subirApunteDetalle.html" class="btn btn-back">Volver</a>
+            <a href="subirApunteCompleto.html" class="btn btn-final">Finalizar</a>
           </div>
         </div>
       </div>

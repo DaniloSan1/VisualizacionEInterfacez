@@ -38,24 +38,38 @@
   <div class="container">
     <p class="breadcrumb-small">Ingeniería / Tec. Universitario en Web  / Visualización e Interfaces </p>
 
-    <!-- filtro grande -->
+    <!-- filtro grande mejorado -->
     <div class="search-pill">
       <select class="form-select form-select-sm">
+        <option selected>Departamento</option>
         <option>Ingeniería</option>
         <option>Humanidades</option>
       </select>
 
       <select class="form-select form-select-sm">
+        <option selected>Carrera</option>
         <option>Tec. Universitario en Web</option>
         <option>Lic. en Diseño</option>
       </select>
 
       <select class="form-select form-select-sm">
+        <option selected>Materia</option>
         <option>Visualización e Interfaces</option>
         <option>UX/UI</option>
       </select>
 
-      <input class="form-control form-control-sm" placeholder="Codigo" style="max-width:120px">
+      <select class="form-select form-select-sm">
+        <option selected>Comisión</option>
+        <option>COM1920</option>
+        <option>COM1921</option>
+      </select>
+
+      <select class="form-select form-select-sm">
+        <option selected>Tipo De Material</option>
+        <option>Apunte</option>
+        <option>Parcial</option>
+        <option>Resumen</option>
+      </select>
 
       <a class="btn btn-search" href="searchResults.html">Buscar</a>
     </div>
@@ -64,16 +78,23 @@
   <!-- grid de resultados -->
   <div class="container mt-4">
     <div class="row g-4">
-      <!-- tarjeta enlazada al detalle -->
+      <!-- tarjeta enlazada al detalle CON FORMATO PDF -->
       <div class="col-6 col-md-3">
-        <a href="detalleApunte.html" class="text-decoration-none" aria-label="Ver Mapa Unidad 2">
-          <div class="file-card" role="img" aria-hidden="true"></div>
+        <a href="detalleApunte.html" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
+            </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
+          </div>
           <div class="file-meta">
             <div class="meta-left">
               <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
               <div>
-                <div class="title">Mapa Unidad 2 – Interfaces</div>
-                <div class="meta-stats"><span>70</span> <span>•</span> <span>8.5k</span></div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>70</span> <span>•</span> <span>80</span></div>
               </div>
             </div>
             <div class="meta-right"></div>
@@ -81,162 +102,260 @@
         </a>
       </div>
 
-      <!-- resto de tarjetas -->
+      <!-- resto de tarjetas CON FORMATO PDF -->
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Visualización y mapeado</div>
-              <div class="meta-stats"><span>70</span> <span>•</span> <span>8.5k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
-      </div>
-
-      <!-- clonar con variaciones -->
-      <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Visualización II</div>
-              <div class="meta-stats"><span>188</span> <span>•</span> <span>9.8k</span></div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>68</span> <span>•</span> <span>80</span></div>
+              </div>
             </div>
+            <div class="meta-right"></div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+        </a>
       </div>
 
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Miro, Leo, Pienso</div>
-              <div class="meta-stats"><span>—</span> <span>•</span> <span>—</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>65</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
       </div>
 
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">UX/UI</div>
-              <div class="meta-stats"><span>365</span> <span>•</span> <span>34.5k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>80</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
       </div>
 
-      <!-- segunda fila -->
+      <!-- segunda y tercera fila: repetir el mismo patrón con variaciones -->
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Leyes Gestalt</div>
-              <div class="meta-stats"><span>210</span> <span>•</span> <span>18.5k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Composición</div>
-              <div class="meta-stats"><span>85</span> <span>•</span> <span>5.6k</span></div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>50</span> <span>•</span> <span>80</span></div>
+              </div>
             </div>
+            <div class="meta-right"></div>
           </div>
-          <div class="meta-right"></div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Resumen 1° parcial</div>
-              <div class="meta-stats"><span>161</span> <span>•</span> <span>21.7k</span></div>
-            </div>
-          </div>
-          <div class="meta-right"></div>
-        </div>
+        </a>
       </div>
 
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Visualización II</div>
-              <div class="meta-stats"><span>133</span> <span>•</span> <span>17.2k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
-      </div>
-
-      <!-- tercera fila -->
-      <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Texto Miro, Leo, Pienso</div>
-              <div class="meta-stats"><span>78</span> <span>•</span> <span>13.8k</span></div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>52</span> <span>•</span> <span>80</span></div>
+              </div>
             </div>
+            <div class="meta-right"></div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+        </a>
       </div>
 
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Evaluación Heurística</div>
-              <div class="meta-stats"><span>38</span> <span>•</span> <span>4k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>40</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
       </div>
 
       <div class="col-6 col-md-3">
-        <div class="file-card"></div>
-        <div class="file-meta">
-          <div class="meta-left">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces">
-            <div>
-              <div class="title">Visualización II</div>
-              <div class="meta-stats"><span>133</span> <span>•</span> <span>17.2k</span></div>
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
             </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
           </div>
-          <div class="meta-right"></div>
-        </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>28</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- tercera fila (últimas 4 tarjetas) -->
+      <div class="col-6 col-md-3">
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
+            </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
+          </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>35</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
+            </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
+          </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>39</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
+            </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
+          </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>28</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <a href="#" class="text-decoration-none file-card-link">
+          <div class="file-card-pdf">
+            <div class="pdf-toolbar">
+              <span class="pdf-nav">☰</span>
+              <span class="pdf-page">1 / 1</span>
+              <span class="pdf-tools">⊕ ⬇ ⋯</span>
+            </div>
+            <div class="pdf-content">MAPA UNIDAD 2 – Interfaces</div>
+          </div>
+          <div class="file-meta">
+            <div class="meta-left">
+              <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="">
+              <div>
+                <div class="title">Mapeado</div>
+                <div class="meta-stats"><span>22</span> <span>•</span> <span>80</span></div>
+              </div>
+            </div>
+            <div class="meta-right"></div>
+          </div>
+        </a>
       </div>
     </div>
 
@@ -249,6 +368,7 @@
           <li class="page-item"><a class="page-link">2</a></li>
           <li class="page-item"><a class="page-link">3</a></li>
           <li class="page-item"><a class="page-link">…</a></li>
+          <li class="page-item"><a class="page-link">10</a></li>
           <li class="page-item"><a class="page-link">11</a></li>
           <li class="page-item"><a class="page-link">›</a></li>
         </ul>

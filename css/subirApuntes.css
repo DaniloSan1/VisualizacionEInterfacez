@@ -251,3 +251,82 @@ body{
   border-color: rgba(45,165,106,0.22);
   box-shadow: 0 8px 20px rgba(45,165,106,0.08);
 }
+
+/* estilos específicos para subirApunteDetalle.html -> que coincidan con la imagen */
+.upload-form {
+  background: #fff;
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: 0 30px 60px rgba(3,10,18,0.06);
+  border: 1px solid rgba(12,18,23,0.04);
+}
+
+/* izquierda: preview grande */
+.form-left .file-badge { display:none; } /* ocultamos badge pequeño si usamos preview grande */
+.form-left .preview-box {
+  width: 100%;
+  height: 320px;
+  border-radius: 14px;
+  background: #dbeee2; /* tono verdoso como en la imagen */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+}
+
+/* inputs con forma tipo "pill" y altura consistente */
+.upload-form .form-control,
+.upload-form .form-select {
+  border-radius: 999px;
+  height: 48px;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(12,18,23,0.06);
+  box-shadow: 0 6px 18px rgba(3,10,18,0.03);
+}
+
+/* textarea - apariencia más clara para placeholder (ya aplicada pero reforzamos) */
+.upload-form textarea.form-control {
+  min-height: 110px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* progress: alargar línea y centrar visual */
+.progress-steps {
+  padding: 10px 0 6px;
+  max-width: 720px;
+  margin: 0 auto 18px;
+}
+.progress-steps .line { flex: 0 0 300px; margin: 0 28px; height: 4px; }
+.progress-steps .dot { width: 16px; height: 16px; margin-bottom: 8px; border-width: 3px; }
+.progress-steps .step .label { margin-top:6px; font-weight:600; color:#6b7280; }
+
+/* fila de botones inferior: Volver a la izquierda y Siguiente a la derecha como en la imagen */
+.action-row { margin-top: 28px; }
+.btn-back {
+  background: transparent;
+  color: #2d6b56;
+  border: 1px solid rgba(45,165,106,0.14);
+  padding: 10px 28px;
+  box-shadow: none;
+}
+.btn-next {
+  background: var(--green);
+  color: #fff;
+  padding: 10px 34px;
+  border-radius: 28px;
+  box-shadow: 0 12px 36px rgba(45,165,106,0.12);
+  border: none;
+}
+
+/* responsive: mantener estructura en móvil pero más compacta */
+@media (max-width: 767.98px) {
+  .upload-form { padding: 22px; }
+  .form-left .preview-box { height: 220px; border-radius: 12px; }
+  .upload-form .form-control, .upload-form .form-select { height: 44px; padding: 8px 14px; }
+  .progress-steps .line { display: none; } /* misma que interfaz: ocultar líneas en móvil para simplicidad */
+  .action-row { flex-direction: row; gap: 12px; }
+  .btn-back { padding: 8px 18px; }
+  .btn-next { padding: 8px 20px; min-width: 140px; }
+}
+
+/* small tweaks para que la tarjeta quede centrada y aspecto idéntico */
+.row.justify-content-center > .col-11.col-md-10 { max-width: 980px; margin: 0 auto; }

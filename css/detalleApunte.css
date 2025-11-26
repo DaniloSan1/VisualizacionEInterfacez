@@ -1,28 +1,74 @@
-:root { --green: #2da56a; }
+:root { --green: #2da56a; --pdf-blue: #0b6ea9; }
 html,body{overflow-x:hidden;}
-    .preview-card { border-radius:14px; overflow:hidden; box-shadow:0 12px 30px rgba(3,10,18,0.04); background:#fff; }
-    .file-preview { width:100%; height:360px; display:flex; align-items:center; justify-content:center; background:#e6efea; color:#456; font-weight:700; border-radius:14px; }
-    .detail-title { color:var(--green); font-weight:700; font-size:1.6rem; }
-    .meta-list dt{ font-weight:700; color:#111; }
-    .meta-list dd{ margin-left:0; color:var(--green); font-weight:600; }
-    .download-btn{
-      background: var(--green);
-      color:#fff;
-      padding:12px 34px;
-      border-radius:28px;
-      border:none;
-      display:inline-block;
-      box-shadow: 0 10px 30px rgba(45,165,106,0.12);
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 8px;
-    }
-    .download-btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 14px 36px rgba(45,165,106,0.16);
-    }
-    @media (max-width:767.98px){
-      .file-preview{height:260px}
-      .detail-title{font-size:1.25rem}
-      .download-btn{ display:inline-block; min-width:160px; }
-    }
+.preview-card { border-radius:14px; overflow:hidden; box-shadow:0 12px 30px rgba(3,10,18,0.04); background:#fff; padding:0; border: none; }
+
+/* marco tipo visor PDF */
+.file-preview { padding: 6px 8px 0 0; }
+.pdf-frame {
+  border: 12px solid var(--pdf-blue);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+.pdf-toolbar {
+  background: rgba(6,79,118,0.98);
+  color: #fff;
+  padding: 6px 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size: 0.9rem;
+}
+.pdf-toolbar .pdf-left { display:flex; gap:8px; align-items:center; }
+.pdf-toolbar .pdf-right { opacity:0.95; }
+.pdf-canvas {
+  background:#fff;
+  color:#111;
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1.4rem;
+  text-align:center;
+  padding:18px;
+}
+
+/* stats (debajo del preview) */
+.file-stats .small { color:#6b7280; font-weight:600; }
+
+/* metadatos derecha */
+.detail-title { color:var(--green); font-weight:700; font-size:1.6rem; margin-top:6px; }
+.meta-list { margin-top: 6px; }
+.meta-list dt{ color:#6b6b6b; font-weight:700; margin-top:12px; }
+.meta-list dd{ margin-left:0; color:#374151; font-weight:600; margin-bottom:6px; }
+
+/* línea divisoria sutil entre descripción y metadatos */
+.text-muted { color:#6b7280; }
+
+/* botón descargar alineado hacia la derecha y con espacio */
+.download-btn{
+  background: var(--green);
+  color:#fff;
+  padding:12px 34px;
+  border-radius:28px;
+  border:none;
+  display:inline-block;
+  box-shadow: 0 10px 30px rgba(45,165,106,0.12);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 18px;
+  float: right; /* alinearlo similar a la imagen */
+}
+
+/* responsive */
+@media (max-width: 991.98px) {
+  .pdf-canvas { min-height:260px; font-size:1.15rem; }
+  .download-btn{ float:none; display:block; width:220px; text-align:center; margin-left:auto; margin-top:14px; }
+}
+@media (max-width:767.98px){
+  .pdf-canvas{min-height:220px}
+  .detail-title{font-size:1.25rem}
+  .download-btn{ display:inline-block; min-width:160px; float:none; margin-left:auto; }
+}
