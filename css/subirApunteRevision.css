@@ -180,8 +180,8 @@ html, body {
 /* estilo botón Volver (izquierda) */
 .btn-back {
   background: transparent;
-  color: #2d6b56;
-  border: 1px solid rgba(45,165,106,0.14);
+  color:var(--green);
+  border: 1px solid var(--green);
   padding: 10px 32px;
   border-radius: 28px;
   box-shadow: none;

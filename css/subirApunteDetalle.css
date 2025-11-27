@@ -49,8 +49,8 @@
 .action-row { margin-top: 28px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
 .btn-back {
   background: transparent;
-  color: #2d6b56;
-  border: 1px solid rgba(45,165,106,0.14);
+  color:var(--green);
+  border: 1px solid var(--green);
   padding: 10px 28px;
   border-radius: 28px;
 }
