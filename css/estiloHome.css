@@ -1,6 +1,5 @@
 body {
             font-family: 'Inter', sans-serif;
-            background: #f6f9f7;
             color: #333;
         }
 
@@ -124,11 +123,18 @@ body {
 .top-nav {
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    position: relative;
-    z-index: 6;
-    padding: 14px 0;
+    padding-block: 1rem;
+}
+.top-nav .container {
+  max-width: 100%;
+  width: 100%;
+  padding-inline: 1.25rem; /* espaciado lateral relativo */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .top-nav .brand {
+  margin-inline-end: auto;
     font-weight: 700;
     font-size: 1.5rem;
     color: #111;
@@ -136,8 +142,15 @@ body {
 .top-nav .brand .dot {
     color: #2da56a;
 }
+.top-nav nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  justify-content: flex-end;
+}
 .top-nav nav .nav-link {
-    color: #333;
+    color:black;
     font-weight: 600;
     opacity: 0.95;
     text-decoration: none;
@@ -149,6 +162,8 @@ body {
 .top-nav .btn-login {
     background: #2da56a;
     color: #fff !important;
+    padding-inline: 0.75rem;
+  padding-block: 0.4rem;
     border-radius: 30px;
     padding: 8px 18px;
     font-weight: 600;
@@ -189,6 +204,22 @@ body {
     line-height: 1.45;
     margin-top: 8px;
 }
+site-footer .d-none.d-md-block > ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.site-footer .d-none.d-md-block > ul li {
+  margin: 0;           /* eliminar margin-bottom por defecto */
+  display: inline-flex;
+  align-items: center;
+}
+
 
 /* links columna derecha */
 .site-footer ul { padding: 0; margin: 0; list-style: none; }
@@ -373,6 +404,10 @@ body {
 
 .pagination { flex-shrink: 0; }
 
+@media (min-width: 75rem) { /* ~1200px */
+  .top-nav .container { padding-inline: 2rem; }
+}
+
 /* RESPONSIVE: Tablet */
 @media (max-width: 991.98px) {
   .search-pill {
@@ -403,6 +438,9 @@ body {
 
 /* RESPONSIVE: Mobile */
 @media (max-width: 767.98px) {
+   .top-nav .container { padding-inline: 0.75rem; }
+  .top-nav nav { gap: 0.6rem; }
+  .top-nav .btn-login { padding-inline: 0.6rem; font-size: 0.95rem; }
   .search-pill {
     flex-direction: row; /* mantener fila */
     gap: 8px;
@@ -489,4 +527,54 @@ body {
   .meta-left .title {
     font-size: 0.85rem;
   }
+}
+
+/* Footer: links en una sola fila y social debajo */
+.site-footer .footer-links-and-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* mantiene todo pegado al borde derecho */
+  gap: 0.75rem;
+}
+
+/* lista inline de links (desktop) */
+.site-footer .footer-links-inline {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* asegurar que cada item no rompa la línea */
+.site-footer .footer-links-inline li {
+  white-space: nowrap;
+}
+
+/* mover la imagen de redes debajo (ya dentro de footer-links-and-social),
+   y hacerla más pequeña si hace falta */
+.site-footer .footer-social-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* la imagen alineada al extremo derecho */
+}
+
+.site-footer .footer-social-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* Responsive: en móviles apilar y centrar */
+@media (max-width: 767.98px) {
+  .site-footer .footer-links-and-social {
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .site-footer .footer-links-inline {
+    display: block;
+  }
+  .site-footer .footer-links-inline li { display: block; margin-bottom: 0.4rem; }
+  .site-footer .footer-social-wrap { justify-content: flex-start; margin-top: 0.5rem; }
 }
