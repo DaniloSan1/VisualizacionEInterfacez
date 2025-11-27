@@ -29,17 +29,17 @@
 }
 
 .login-container {
-  width: 539px;
-  max-width: 539px;
-  height: 569px;
+  width: min(92%, 540px);    /* ancho fluido hasta 540px */
+  max-width: 540px;
+  height: auto;             /* altura automática para dispositivos pequeños */
   position: relative;
   z-index: 1;
 }
 
 .login-logo {
   position: fixed;
-  top: 64px;
-  left: 64px;
+  top: 2.5rem;
+  left: 2.5rem;
   margin: 0 0 32px 0;
   z-index: 100;
 }
@@ -67,7 +67,7 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 32px;
-  padding: 48px 40px 40px 40px;
+  padding: 3rem 2.25rem 2.25rem;
   box-shadow: 
     0 32px 64px rgba(0, 0, 0, 0.06),
     0 8px 32px rgba(0, 0, 0, 0.04),
@@ -118,8 +118,9 @@
   border-radius: 28px;
   border: 1px solid #e5e7eb;
   transition: all 0.2s ease;
-  min-width: 453px;
-  height: 60px;
+  width: 100%;
+  min-width: 0;
+  height: 56px; /* altura consistente pero no bloqueante */
 }
 
 .input-group:focus-within {
@@ -141,8 +142,8 @@
   border: none;
   background: transparent;
   padding: 0 12px 0 0;
-  font-size: 15px;
-  color: #EEEEEE;
+  font-size: 1rem;
+  color: #111;    /* texto visible sobre fondo claro */
   flex: 1;
   outline: none;
   box-shadow: none !important;
@@ -242,63 +243,43 @@
 /* Responsive Design - 799px and below */
 @media (max-width: 799px) {
   .login-body {
-    padding: 16px;
+    padding: 1rem;
     flex-direction: column;
   }
 
   .login-container {
-    max-width: 569px;
+    max-width: 92%;
+    margin: 0 auto;
   }
 
   .login-logo {
     position: static;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     top: auto;
     left: auto;
     order: -1;
   }
 
-  .login-logo .brand {
-    font-size: 40px;
-  }
-
   .login-card {
-    padding: 32px 24px;
+    padding: 2rem 1.25rem;
     border-radius: 20px;
-    margin: 0 8px;
+    margin: 0 0.5rem;
   }
 
   .login-title {
-    font-size: 28px;
-  }
-
-  .welcome-text {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 
   .login-input {
-    font-size: 16px; /* Mantiene 16px para evitar zoom en iOS */
+    font-size: 1rem; /* evitar zoom en iOS y mantener legible */
   }
 }
 
 @media (max-width: 480px) {
-  .login-card {
-    padding: 24px 20px;
-    margin: 0;
-  }
-
-  .login-logo .brand {
-    font-size: 36px;
-  }
-
-  .login-title {
-    font-size: 24px;
-  }
-
   .input-icon,
   .password-toggle {
-    padding: 0 12px;
+    padding: 0 0.75rem;
   }
 }
 
