@@ -248,14 +248,15 @@
   }
 
   .login-container {
-    max-width: 92%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 569px;
+    height: auto;
   }
 
   .login-logo {
     position: static;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     top: auto;
     left: auto;
     order: -1;
@@ -277,6 +278,18 @@
 }
 
 @media (max-width: 480px) {
+  .login-card {
+    padding: 24px 20px;
+    margin: 0;
+  }
+
+  .login-logo .brand {
+    font-size: 36px;
+  }
+
+  .login-title {
+    font-size: 24px;
+  }
   .input-icon,
   .password-toggle {
     padding: 0 0.75rem;
