@@ -118,6 +118,15 @@ body {
             color: #666;
             font-size: 0.95rem;
         }
+        .usage-card img {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 50%;
+  border: black 1px solid;
+  display: block;
+  margin: 0 auto;
+}
 
         /* HEADER (componentes/header.html) */
 .top-nav {
@@ -225,7 +234,7 @@ site-footer .d-none.d-md-block > ul {
 .site-footer ul { padding: 0; margin: 0; list-style: none; }
 .site-footer ul li { margin-bottom: 8px; }
 .site-footer ul li a {
-    color: #2da56a;
+    color: black;
     text-decoration: none;
     font-weight: 600;
 }
@@ -561,7 +570,7 @@ site-footer .d-none.d-md-block > ul {
 }
 
 .site-footer .footer-social-img {
-  height: 34px;
+  height: 11em;
   width: auto;
   display: block;
 }
@@ -595,4 +604,38 @@ site-footer .d-none.d-md-block > ul {
   background-position: right 0.75rem center;
   background-size: 16px;
   padding-right: 2.5rem;
+}
+
+/* Logo en el nav */
+.brand-logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-inline-end: auto;
+}
+
+.brand-logo .logo-img {
+  height: 7em;
+  width: auto;
+  display: block;
+}
+
+/* Logo en el footer */
+.footer-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.footer-logo-link .logo-img {
+  height: 9em;
+  width: auto;
+  display: block;
+}
+
+/* Responsive: ajustar altura del logo en móviles */
+@media (max-width: 767.98px) {
+  .brand-logo .logo-img,
+  .footer-logo-link .logo-img {
+    height: 7em;
+  }
 }

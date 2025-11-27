@@ -18,26 +18,29 @@
 </head>
 <body>
 
-  <!-- NAV (misma que en home) -->
-  <header class="top-nav">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center gap-3">
-        <div class="brand">Apunt<span class="dot">i</span></div>
-      </div>
-
-      <nav class="d-none d-md-flex align-items-center gap-4">
-        <a class="nav-link" href="home.html">Inicio</a>
-        <a class="nav-link" href="searchResults.html">Buscar material</a>
-        <a class="nav-link active" href="subirApuntes.html">Subir material</a>
-        <a class="nav-link" href="perfil.html">Mi perfil</a>
-        <a href="login.html" class="btn btn-login text-decoration-none">Iniciar Sesión</a>
-      </nav>
-
-      <div class="d-md-none">
-        <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
-      </div>
+  <!-- NAV -->
+<header class="top-nav">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <a href="home.html" class="brand-logo">
+        <img src="images/Apunti.png" alt="Apunti" class="logo-img">
+      </a>
     </div>
-  </header>
+
+    <nav class="d-none d-md-flex align-items-center gap-4">
+      <a class="nav-link" href="home.html">Inicio</a>
+      <a class="nav-link" href="searchResults.html">Buscar material</a>
+      <a class="nav-link" href="subirApuntes.html">Subir material</a>
+      <a class="nav-link" href="perfil.html">Mi perfil</a>
+      <a href="login.html" class="btn btn-login text-decoration-none">Iniciar Sesión</a>
+    </nav>
+
+    <!-- mobile toggle -->
+    <div class="d-md-none">
+      <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
+    </div>
+  </div>
+</header>
 
   <main class="main-content">
     <div class="container">
@@ -118,16 +121,18 @@
     </div>
   </main>
 
-  <!-- FOOTER (misma que en home) -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
       <div>
-        <div class="footer-logo">Apunt<span class="dot">i</span></div>
-        <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
-        Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
-      </div>
+        <a href="home.html" class="footer-logo-link">
+          <img src="images/Apunti.png" alt="Apunti" class="logo-img">
+        </a>
+         <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
+         Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
+       </div>
 
-      <div class="d-flex gap-4 align-items-start">
+       <div class="d-flex gap-4 align-items-start">
         <div class="footer-links-and-social d-flex flex-column align-items-end">
           <div class="d-none d-md-block">
             <ul class="list-unstyled footer-links-inline">
