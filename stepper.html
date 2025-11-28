@@ -263,7 +263,6 @@
     <script src="js/components-loader.js"></script>
 
     <script>
-      // Navegación
       function nextStep(targetStep) {
         updateView(targetStep);
       }
@@ -273,13 +272,10 @@
       }
 
       function finishUpload() {
-        // 1. Ocultar la cabecera (Breadcrumb, Título, Progreso)
         document.getElementById("headerSection").style.display = "none";
 
-        // 2. Ocultar la tarjeta blanca principal
         document.getElementById("mainCard").style.display = "none";
 
-        // 3. Mostrar el mensaje de éxito
         const successDiv = document.getElementById("successMessageContainer");
         successDiv.classList.remove("d-none");
         successDiv.classList.add("d-flex");
@@ -312,13 +308,11 @@
         const l1 = document.getElementById("line-1");
         const l2 = document.getElementById("line-2");
 
-        // Reset
         [s2, s3].forEach((s) => s.classList.remove("active", "completed"));
         [l1, l2].forEach((l) => l.classList.remove("active"));
         s2.querySelector(".dot-ring").classList.remove("filled");
         s3.querySelector(".dot-ring").classList.remove("filled");
 
-        // Paso 1 siempre lleno
         s1.classList.add("completed");
         s1.querySelector(".dot-ring").classList.add("filled");
 
@@ -367,7 +361,6 @@
       window.addEventListener("resize", checkAutoCenter);
     </script>
 
-    <!-- Footer modular -->
     <div id="footer-placeholder"></div>
     <script src="js/components-loader.js"></script>
 
