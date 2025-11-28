@@ -2,71 +2,115 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mapa Unidad 2 – Interfaces · Apunti</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa Unidad 2 - Detalle</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estiloHome.css">
-    <link rel="stylesheet" href="css/detalleApunte.css">
+  <link rel="stylesheet" href="css/detalleApunte.css">
 </head>
-<body>
+<body class="detail-page-body">
 
-  <!-- NAV -->
   <div id="header-placeholder"></div>
 
-  <main class="container my-5">
-    <p class="breadcrumb-small">Inicio / Buscar Material / Ingeniería / Tec. Universitario en Web / Visualización e Interfaces / Apuntes / <strong>Mapa Unidad 2</strong></p>
+  <main class="container detail-container">
+    
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-clean">
+        <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="searchResults.html">Buscar Material</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Mapa Unidad 2</li>
+      </ol>
+    </nav>
 
-    <div class="row g-4 align-items-start mt-3">
-      <div class="col-12 col-md-6">
-        <div class="preview-card">
-          <div class="file-preview">
-            <div class="pdf-frame">
-              <div class="pdf-toolbar">
-                <div class="pdf-left">🔍 <span class="pdf-page">1 / 1</span></div>
-                <div class="pdf-right">⊕ ⬇ ⤢</div>
-              </div>
-              <div class="pdf-canvas" role="img" aria-label="Preview PDF">
-                MAPA UNIDAD 2 –<br>Interfaces
+    <div class="row g-5">
+      
+      <div class="col-12 col-lg-6">
+        <div class="pdf-viewer-card">
+          <div class="pdf-toolbar">
+            <div class="toolbar-left">
+              <span class="icon-search">🔍</span>
+              <span class="page-count">1 / 1</span>
+            </div>
+            <div class="toolbar-right">
+              <span>-</span>
+              <span class="zoom-level">100%</span>
+              <span>+</span>
+              <span class="ms-2">⬇</span>
+              <span class="ms-2">⛶</span>
+            </div>
+          </div>
+          
+          <div class="pdf-canvas">
+            <div class="pdf-content-mock">
+              <h2>MAPA UNIDAD 2 –<br>Interfaces</h2>
+              <div class="fake-text-lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line short"></div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="file-stats d-flex gap-3 align-items-center mt-3">
-            <div class="small text-muted">👍 70</div>
-            <div class="small text-muted">⬇ 80</div>
-            <div class="small text-muted">👤 Rosario Fernández</div>
+        <div class="file-meta-footer mt-3 d-flex justify-content-between align-items-center">
+          <div class="stats d-flex gap-4">
+            <span class="stat-item"><img src="https://img.icons8.com/material-outlined/24/4d515a/thumb-up.png" alt="Like"> 70</span>
+            <span class="stat-item"><img src="https://img.icons8.com/material-outlined/24/4d515a/download--v1.png" alt="Download"> 80</span>
+          </div>
+          <div class="uploader d-flex align-items-center gap-2">
+            <img src="https://img.icons8.com/ios-glyphs/60/737373/user-male-circle.png" class="avatar-tiny" alt="User">
+            <span class="uploader-name">Rosario Fernández</span>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-md-6">
-        <h1 class="detail-title">Mapa Unidad 2 – Interfaces</h1>
-        <p class="text-muted mb-3">Resumen completo de la teórica + ejemplos vistos en clase. Resumen completo de la teórica + ejemplos vistos en clase.</p>
+      <div class="col-12 col-lg-6">
+        <div class="file-info-wrapper">
+          <h1 class="file-title">Mapa Unidad 2 – Interfaces</h1>
+          
+          <p class="file-description">
+            Resumen completo de la teórica + ejemplos vistos en clase. 
+            Resumen completo de la teórica + ejemplos vistos en clase. 
+            Resumen completo de la teórica + ejemplos vistos en clase.
+          </p>
 
-        <dl class="row meta-list">
-          <dt class="col-5">Departamento:</dt><dd class="col-7">Ingeniería</dd>
-          <dt class="col-5">Carrera:</dt><dd class="col-7">Tec. Universitario en Web</dd>
-          <dt class="col-5">Materia:</dt><dd class="col-7">Visualización e Interfaces</dd>
-          <dt class="col-5">Comisión:</dt><dd class="col-7">COM1920</dd>
-          <dt class="col-5">Tipo de material:</dt><dd class="col-7">Apunte</dd>
-          <dt class="col-5">Fecha de subida:</dt><dd class="col-7">13/02/2025</dd>
-        </dl>
+          <div class="meta-data-list">
+            <div class="meta-row">
+              <span class="meta-label">Departamento:</span>
+              <span class="meta-value">Ingeniería</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Carrera:</span>
+              <span class="meta-value">Tec. Universitario en Web</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Materia:</span>
+              <span class="meta-value">Visualización e interfaces</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Comisión:</span>
+              <span class="meta-value">COM1920</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Tipo de material:</span>
+              <span class="meta-value">Apunte</span>
+            </div>
+          </div>
 
-        <div class="mt-4">
-          <a class="download-btn" href="files/MapaUnidad2.pdf" download aria-label="Descargar Mapa Unidad 2">Descargar</a>
+          <div class="mt-5">
+            <button class="btn btn-download-large">Descargar</button>
+          </div>
+
         </div>
       </div>
+
     </div>
   </main>
 
-  <!-- Footer modular -->
-  <div id="footer-placeholder"></div>
-  <script src="js/components-loader.js"></script>
+    <div id="footer-placeholder"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/components-loader.js"></script>

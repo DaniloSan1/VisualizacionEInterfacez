@@ -2,119 +2,115 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Revisar - Apunti</title>
 
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles existentes -->
-  <link rel="stylesheet" href="css/subirApuntes.css">
   <link rel="stylesheet" href="css/estiloHome.css">
+  <link rel="stylesheet" href="css/subirApuntes.css">
   <link rel="stylesheet" href="css/subirApunteRevision.css">
 </head>
-<body>
+<body class="upload-page-body">
 
-  <!-- NAV -->
-<!-- NAV -->
-<div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
-    <!-- mobile toggle -->
-    <div class="d-md-none">
-      <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
-    </div>
-  </div>
-</header>
-
-  <main class="main-content">
-    <div class="container">
-
-      <!-- breadcrumb -->
-      <div class="pt-3">
-        <small class="text-muted">Inicio / <span class="text-success">Subir material / Detalle / Revision</span></small>
+  <main class="main-content-fixed">
+    <div class="container upload-container">
+      
+      <div class="breadcrumb-wrapper">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-clean mb-0">
+            <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="subirApuntes.html">Subir material</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Revisar</li>
+          </ol>
+        </nav>
       </div>
 
-      <!-- título -->
-      <div class="text-center page-title">
-        <h1 class="display-6 fw-semibold">Revisá los datos</h1>
+      <div class="text-center mb-2">
+        <h1 class="page-title-green">Revisá los datos</h1>
       </div>
 
-      <!-- progress (todos los pasos como completados + último activo) -->
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-10">
-          <div class="progress-steps d-flex align-items-center justify-content-between">
-            <div class="step active text-center">
-              <div class="dot"></div>
-              <div class="label">Subir</div>
-            </div>
-
-            <div class="line active d-none d-md-block"></div>
-
-            <div class="step active text-center">
-              <div class="dot"></div>
-              <div class="label">Detalles</div>
-            </div>
-
-            <div class="line active d-none d-md-block"></div>
-
-            <div class="step active text-center">
-              <div class="dot"></div>
-              <div class="label">Revisar</div>
-            </div>
+      <div class="progress-wrapper mb-3">
+        <div class="steps-container">
+          <div class="step completed">
+            <div class="dot-ring filled"></div>
+            <span class="label">Subir</span>
+          </div>
+          <div class="line active"></div>
+          
+          <div class="step completed">
+            <div class="dot-ring filled"></div>
+            <span class="label">Detalles</span>
+          </div>
+          <div class="line active"></div>
+          
+          <div class="step active">
+            <div class="dot-ring"></div>
+            <span class="label">Revisar</span>
           </div>
         </div>
       </div>
 
-      <!-- tarjeta de revisión con los datos -->
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-10">
-          <div class="review-card">
-            <div class="review-card-inner">
-              <!-- izquierda: preview PDF (desktop: izq, mobile: arriba) -->
-              <div class="col-12 col-md-5">
-                <div class="preview-box" aria-hidden="true"></div>
+      <div class="card review-card">
+        <div class="row h-100">
+          
+          <div class="col-md-4 d-flex align-items-center justify-content-center bg-preview-col">
+            <div class="pdf-preview-box-static"></div>
+          </div>
+
+          <div class="col-md-8 d-flex flex-column justify-content-center info-col ps-md-4">
+            
+            <h3 class="doc-title">Mapa Unidad 2 – Interfaces</h3>
+            
+            <p class="doc-desc">
+              Resumen completo de la teórica + ejemplos vistos en clase.
+              Resumen completo de la teórica + ejemplos vistos en clase.
+              Resumen completo de la teórica + ejemplos vistos en clase.
+            </p>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <span class="meta-label">Departamento:</span>
+                <span class="meta-value">Ingeniería</span>
               </div>
-
-              <!-- derecha: título, descripción y metadatos -->
-              <div class="col-12 col-md-7">
-                <h3 class="mb-2">Mapa Unidad 2 – Interfaces</h3>
-                <p class="text-muted mb-3 desc">
-                  Resumen completo de la teórica + ejemplos vistos en clase. Resumen completo de la teórica + ejemplos vistos en clase. Resumen completo de la teórica + ejemplos vistos en clase.
-                </p>
-
-                <dl class="review-list row mb-0">
-                  <dt class="col-4">Archivo:</dt><dd class="col-8">Mapeado.pdf</dd>
-                  <dt class="col-4">Departamento:</dt><dd class="col-8">Ingeniería</dd>
-                  <dt class="col-4">Carrera:</dt><dd class="col-8">Tec. Universitario en Web</dd>
-                  <dt class="col-4">Materia:</dt><dd class="col-8">Visualización e interfaces</dd>
-                  <dt class="col-4">Comisión:</dt><dd class="col-8">COM1920</dd>
-                  <dt class="col-4">Tipo de material:</dt><dd class="col-8">Apunte</dd>
-                </dl>
+              <div class="meta-item">
+                <span class="meta-label">Carrera:</span>
+                <span class="meta-value">Tec. Universitario en Web</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Materia:</span>
+                <span class="meta-value">Visualización e interfaces</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Comisión:</span>
+                <span class="meta-value">COM1920</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Tipo de material:</span>
+                <span class="meta-value">Apunte</span>
               </div>
             </div>
-          </div>
 
-          <!-- botones: Volver (izq) y Finalizar (der) fuera de la tarjeta como en la imagen -->
-          <div class="action-row mt-4">
-            <a href="subirApunteDetalle.html" class="btn btn-back">Volver</a>
-            <a href="subirApunteCompleto.html" class="btn btn-final">Finalizar</a>
           </div>
         </div>
+      </div>
+
+      <div class="action-buttons-row mt-4">
+        <a href="subirApunteDetalle.html" class="btn btn-back-outline">Volver</a>
+        <button class="btn btn-next-green">Finalizar</button>
       </div>
 
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <!-- Footer modular -->
     <div id="footer-placeholder"></div>
-    <script src="js/components-loader.js"></script>
+  </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components-loader.js"></script>
 </body>
 </html>

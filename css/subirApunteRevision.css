@@ -1,242 +1,154 @@
-html, body {
-  overflow-x: hidden;
+/* =========================================
+   ESTILOS ESPECÍFICOS: REVISIÓN
+   ========================================= */
+
+/* Título Verde */
+.page-title-green {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #3f9b7b;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
 }
 
-/* título de la página */
-.page-title {
-  margin-top: 44px;
-  margin-bottom: 30px;
+/* Pasos Completados */
+.step.completed .label {
+  color: #3f9b7b; /* Verde texto */
+  font-weight: 500;
+}
+.dot-ring.filled {
+  background-color: #3f9b7b;
+  border-color: #3f9b7b;
+}
+.line.active {
+  background-color: #3f9b7b;
 }
 
-/* ajustes de los pasos (progress) */
-.progress-steps {
-  padding-bottom: 6px;
-}
-.progress-steps .step {
-  text-align: left;
-}
-.progress-steps .step .label {
-  font-size: 1rem;
-}
-
-/* línea entre pasos (ajustada de largo) */
-.progress-steps .line {
-  height: 2px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03));
-  flex: 0 0 140px;
-  margin: 0 18px;
-  border-radius: 2px;
-  align-self: center;
-}
-.progress-steps .line.active {
-  background: linear-gradient(90deg, var(--green), rgba(45,165,106,0.7));
-  box-shadow: 0 6px 18px rgba(45,165,106,0.12);
-  border-radius: 4px;
-  flex: 0 0 140px;
-}
-
-/* puntos (dots) y estado activo deberían venir de subirApuntes.css,
-   aquí sólo se asegura legibilidad si es necesario */
-.progress-steps .dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(0,0,0,0.08); background: #fff; margin: 0 auto; }
-.progress-steps .step.active .dot { border-color: var(--green); background: #fff; box-shadow: 0 4px 14px rgba(45,165,106,0.08); }
-.progress-steps .step.active .label { color: var(--green); font-weight: 600; }
-
-/* tarjeta de revisión */
+/* Tarjeta de Revisión */
 .review-card {
-  border-radius: 26px;
-  border: 1px solid rgba(12,18,23,0.03);
-  padding: 34px;
-  max-width: 980px; /* aumentar para que quepa en una fila */
-  margin: 28px auto;
   background: #ffffff;
-  box-shadow: 0 28px 50px rgba(3,10,18,0.06);
-  width: 100%;
-  box-sizing: border-box;
-  overflow: visible;
-}
-.review-card h3 {
-  color: var(--green);
-  text-align: left;          /* importante: alineado a la izquierda */
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-.review-card p.lead {
-  text-align: center;
-  color: #374151;
-  margin-bottom: 20px;
-}
-.review-card .desc, .review-card p.text-muted {
-  color: #6b7280;
-  text-align: left;
-  line-height: 1.45;
-  margin-bottom: 12px;
-  font-size: 0.94rem;
-}
-
-/* lista de revisión */
-.review-list { margin-top: 6px; }
-.review-list dt { color: #6b6b6b; font-weight: 600; margin-top: 10px; }
-.review-list dd { color: #374151; font-weight: 600; margin-bottom: 8px; }
-
-/* acciones (botones) */
-.review-actions {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  margin-top: 28px;
-  flex-direction: row;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.btn-outline-edit {
-  border: 1px solid rgba(45,165,106,0.22);
-  color: #1f3b2f;
-  background: transparent;
-  border-radius: 28px;
-  padding: 10px 28px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 140px;
-  flex: 0 0 auto;
-}
-.btn-publish {
-  background: var(--green);
-  color: #fff;
-  border-radius: 28px;
-  padding: 10px 32px;
+  border-radius: 32px;
   border: none;
-  box-shadow: 0 10px 30px rgba(45,165,106,0.12);
-  min-width: 140px;
-  flex: 0 0 auto;
-}
-
-/* layout interno: preview izquierda + contenido a la derecha (desktop) */
-.review-card {
-  border-radius: 26px;
-  border: 1px solid rgba(12,18,23,0.03);
-  padding: 34px;
-  max-width: 980px; /* aumentar para que quepa en una fila */
-  margin: 28px auto;
-  background: #ffffff;
-  box-shadow: 0 28px 50px rgba(3,10,18,0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05); 
+  
+  /* Altura fija para layout 100vh */
+  height: 400px; 
   width: 100%;
-  box-sizing: border-box;
-  overflow: visible;
+  max-width: 900px; /* Más ancha que el form anterior para que entre el texto */
+  margin: 0 auto;
+  padding: 40px;
+  overflow: hidden;
 }
 
-/* FORZAR fila en desktop y controlar anchos (lado a lado) */
-.review-card-inner {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-  flex-wrap: nowrap; /* lado a lado en desktop */
+/* Preview Estática (Gris) */
+.bg-preview-col {
+  padding-right: 20px;
 }
 
-/* columna izquierda (preview) */
-.review-card .col-md-5 { padding-right: 20px; }
-.review-card .preview-box {
+.pdf-preview-box-static {
   width: 100%;
-  height: 320px;
-  border-radius: 12px;
-  background: #dbeee2;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+  height: 100%;
+  background-color: #b0c4b8; /* Tono verdoso grisáceo suave (tipo la imagen) */
+  border-radius: 16px;
+  opacity: 0.8;
 }
 
-/* columna derecha (texto) */
-.review-card .col-md-7 { padding-left: 20px; }
-.review-card h3 {
-  color: var(--green);
-  text-align: left;          /* importante: alineado a la izquierda */
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-}
-.review-card .desc, .review-card p.text-muted {
-  color: #6b7280;
+/* Columna de Info */
+.info-col {
+  padding-left: 20px;
   text-align: left;
-  line-height: 1.45;
-  margin-bottom: 12px;
-  font-size: 0.94rem;
 }
 
-/* metadatos */
-.review-list dt { color: #6b6b6b; font-weight: 600; margin-top: 10px; }
-.review-list dd { color: #374151; font-weight: 600; margin-bottom: 8px; }
+.doc-title {
+  color: #3f9b7b; /* Verde */
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
 
-/* botones fuera de la tarjeta: alineación igual a la imagen */
-.action-row {
-  max-width: 980px;
-  margin: 22px auto 0;
+.doc-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+
+/* Lista de Metadatos */
+.meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-item {
+  font-size: 0.95rem;
+}
+
+.meta-label {
+  color: #3f9b7b; /* Verde */
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.meta-value {
+  color: #444;
+  font-weight: 400;
+}
+
+/* Botones (Reutilizados pero ajustando ancho contenedor) */
+.action-buttons-row {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 18px;
+  padding: 0 10px;
 }
 
-/* estilo botón Volver (izquierda) */
-.btn-back {
-  background: transparent;
-  color:var(--green);
-  border: 1px solid var(--green);
-  padding: 10px 32px;
-  border-radius: 28px;
-  box-shadow: none;
+.btn-back-outline {
+  border: 1px solid #3f9b7b;
+  color: #3f9b7b;
+  padding: 8px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.btn-back-outline:hover {
+  background-color: #f0fdf8;
+  color: #2d7a60;
 }
 
-/* estilo botón Finalizar (derecha) */
-.btn-final {
-  background: var(--green);
-  color: #fff;
-  padding: 10px 36px;
-  border-radius: 28px;
-  box-shadow: 0 12px 36px rgba(45,165,106,0.12);
+.btn-next-green {
+  background-color: #4ca986;
+  color: white;
   border: none;
+  padding: 8px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.btn-next-green:hover {
+  background-color: #3f9b7b;
+  color: white;
 }
 
-/* responsive */
-@media (max-width: 575.98px) {
-  .review-card { padding: 20px; margin: 18px; }
-  .page-title { margin-top: 22px; }
-  .progress-steps .line { display: none; } /* mantener comportamiento consistente en móviles */
-  .review-card { padding: 18px; margin: 12px; }
-  .review-list { display: block; }
-  /* las clases col-4 / col-8 usadas en el dl pueden obligar ancho: forzamos apilado */
-  .review-list .col-4, .review-list dt {
-    width: 100% !important;
-    float: none !important;
-    display: block;
-    margin-bottom: 6px;
-  }
-  .review-list .col-8, .review-list dd {
-    width: 100% !important;
-    float: none !important;
-    display: block;
-    margin-bottom: 12px;
-    padding-left: 0;
-  }
-  .review-list dt { font-size: 0.95rem; color: #111827; }
-  .review-list dd { color: var(--green); font-weight: 600; }
-  .review-actions {
-    flex-direction: row;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn-outline-edit, .btn-publish {
-    min-width: 140px;
-    flex: 0 0 auto;
-  }
-}
-
-/* responsive: apilar preview encima del contenido en pantallas pequeñas */
+/* Responsive */
 @media (max-width: 767.98px) {
-  .review-card-inner { flex-direction: column; }
-  .review-card .preview-box { height: 200px; }
-  .review-card .col-md-5, .review-card .col-md-7 { padding: 0; }
-  .action-row { flex-direction: row; justify-content: space-between; gap: 12px; }
-  .review-card { padding: 20px; margin: 18px; }
+  .review-card {
+    height: auto;
+    padding: 25px;
+  }
+  
+  .pdf-preview-box-static {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .bg-preview-col { padding-right: 0; }
+  .info-col { padding-left: 0; }
+  
+  .doc-title { font-size: 1.4rem; }
 }
