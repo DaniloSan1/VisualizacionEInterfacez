@@ -20,17 +20,21 @@ html, body { overflow-x: hidden; }
   padding: 12px 28px;
   border-radius: 32px;
   font-weight: 600;
+  transition: all 0.3s ease;
   box-shadow: none;
 }
+.btn-outline-custom:hover { background-color: #2da56a; transform: translateY(-2px); color: #fff; }
 .btn-primary-custom {
   background: var(--green);
   border: none;
   color: #fff;
   padding: 12px 30px;
   border-radius: 32px;
+  transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(45,165,106,0.12);
   font-weight: 600;
 }
+.btn-primary-custom:hover { background-color: #28a55f; transform: translateY(-2px); color: #fff; }
 
 /* tipografía y ancho del lead */
 .lead { max-width: 820px; margin: 0 auto; }

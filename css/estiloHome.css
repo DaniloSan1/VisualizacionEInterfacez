@@ -67,8 +67,10 @@ header, .site-header {
   padding:8px 20px;
   border: none;
   font-weight: 500;
+  transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(63,155,123,0.12);
 }
+.btn-login:hover{ background-color: #2da56a; transform: translateY(-2px); color: #fff; }
 
 .hero-wrapper {
     margin-top: 130px; 
