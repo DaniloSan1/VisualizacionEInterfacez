@@ -1,11 +1,9 @@
-/* =========================================
-   LAYOUT: SUBIR APUNTES (100vh COMPACTO)
-   ========================================= */
+
 
 .upload-page-body {
   height: 100vh;
   width: 100vw;
-  overflow: hidden; /* Sin scroll en desktop */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -18,7 +16,6 @@
   align-items: center;
   justify-content: flex-start;
   
-  /* PADDING AJUSTADO: Lo justo para el header */
   padding-top: 90px; 
   padding-bottom: 20px;
   width: 100%;
@@ -27,7 +24,6 @@
 .upload-container {
   max-width: 800px;
   width: 100%;
-  /* Flex para centrar verticalmente si sobra espacio */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +44,6 @@
   margin-bottom: 0;
 }
 
-/* PROGRESO */
 .progress-wrapper {
   display: flex;
   justify-content: center;
@@ -91,8 +86,6 @@
   margin: 0 8px;
   margin-bottom: 18px;
 }
-
-/* TARJETA BASE */
 .upload-card {
   background: #ffffff;
   border-radius: 24px;
@@ -113,7 +106,7 @@
   background-color: #fcfcfc;
   border: 2px dashed #dde0e4;
   border-radius: 16px;
-  height: 160px; /* Altura controlada */
+  height: 160px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +125,6 @@
 }
 .btn-upload-green:hover { background-color: var(--green-dark); transform: translateY(-2px); }
 
-/* FOOTER STICKY */
 footer.site-footer {
   margin-top: auto;
   flex-shrink: 0;
@@ -140,7 +132,6 @@ footer.site-footer {
   padding-bottom: 15px !important;
 }
 
-/* MOBILE */
 @media (max-width: 767.98px) {
   .upload-page-body { height: auto; overflow-y: auto; }
   .main-content-fixed { padding-top: 110px; padding-bottom: 40px; }

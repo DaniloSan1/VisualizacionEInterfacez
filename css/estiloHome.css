@@ -266,7 +266,6 @@ header, .site-header {
   background: transparent; color: #aaa; cursor: default; font-size: 1.2rem; padding-bottom: 10px;
 }
 
-/* EMPTY STATE */
 .empty-search-state {
   text-align: center; padding: 0 20px; max-width: 600px; margin: 0 auto;
   min-height: 60vh; display: flex; flex-direction: column; justify-content: center;
@@ -334,7 +333,6 @@ header, .site-header {
     .btn-filter-search { 
         width: 100%; margin-top: 8px; padding: 8px 0; font-size: 0.95rem;
     }
-    /* Footer compacto en mobile */
     .site-footer { margin-top: 40px; padding: 20px 0; }
     .site-footer .container { gap: 8px !important; }
     .brand { font-size: 22px; }

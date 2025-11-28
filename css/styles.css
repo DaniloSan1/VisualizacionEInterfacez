@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Fuentes y variables */
 :root{
   --green:#3f9b7b;
   --green-dark:#397f63;
@@ -39,7 +38,6 @@ body::after {
   pointer-events: none;
 }
 
-/* NAV */
 .top-nav{
   padding: 28px 48px;
   background: transparent;
@@ -62,7 +60,6 @@ body::after {
   box-shadow: 0 6px 18px rgba(63,155,123,0.12);
 }
 
-/* HERO */
 .hero{
   max-width:1200px;
   margin: 30px auto 60px;
@@ -102,7 +99,6 @@ body::after {
   margin-bottom:30px;
 }
 
-/* Search pill over hero */
 .search-pill{
   position: absolute;
   left:50%;
@@ -135,7 +131,6 @@ body::after {
   box-shadow: 0 10px 26px rgba(63,155,123,0.12);
 }
 
-/* Section: cómo usar */
 .how-section{
   margin-top:110px;
   text-align:center;
@@ -160,7 +155,6 @@ body::after {
 }
 .how-cards .card p{ color:#7a7a7a; font-size:14px; }
 
-/* GRID de resultados (segunda imagen) */
 .results-wrap{
   max-width:1200px;
   margin: 80px auto;
@@ -206,7 +200,6 @@ body::after {
 .meta-text{ font-size:13px; color:#222; font-weight:600; }
 .meta-stats{ margin-left:auto; display:flex; gap:10px; color:#666; font-size:13px; align-items:center; }
 
-/* Pagination similar look */
 .pagination .page-link{
   border-radius:50%;
   width:36px;
@@ -221,8 +214,6 @@ body::after {
   background:var(--green);
   color:#fff;
 }
-
-/* FOOTER */
 footer.site-footer{
   margin-top:60px;
   padding:70px 40px;
@@ -245,7 +236,6 @@ footer.site-footer::before {
 .footer-logo .dot{ color:var(--green); }
 .footer-mini{ color:#7a7a7a; font-size:14px; max-width:540px; }
 
-/* Responsive tweaks */
 @media (max-width: 991px){
   .hero{ padding:80px 20px 120px; border-radius:20px; background-position: center center; }
   .hero h1{ font-size:36px; }
@@ -258,4 +248,3 @@ footer.site-footer::before {
   .how-cards .card{ min-height:150px; }
 }
 
-/* 🔥 FIX DEFINITIVO PARA PEGAR EL LOGO EN EL HEADER */
