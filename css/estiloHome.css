@@ -1,3 +1,10 @@
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
 body {
     position: relative;
     background-color: #ffffff;
@@ -191,12 +198,11 @@ body {
   align-self: flex-start;
 }
 
-/* HEADER */
 header, .site-header {
   height: 10vh;
   min-height: 60px;
   max-height: 110px;
-  width: 100vw;
+  width: 100%;    /* <--- CORREGIDO: Usar % respeta el scrollbar */
   position: fixed;
   top: 0;
   left: 0;
@@ -619,3 +625,17 @@ header, .site-header {
         display: none;
     }
 }
+@media (max-width: 767.98px) {
+    
+    /* ... tus otras reglas de mobile ... */
+
+    /* Ajuste de la mancha verde para celular */
+    body::before {
+        width: 280px;      /* Más chica para que no ocupe todo */
+        height: 280px;
+        right: -60px;      /* Que sobresalga menos */
+        top: 380px;        /* Un poco más abajo del Hero */
+        opacity: 0.6;      /* Un poco más suave en pantallas chicas */
+    }
+}
+
