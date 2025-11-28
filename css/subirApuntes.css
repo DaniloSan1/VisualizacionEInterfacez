@@ -1,52 +1,62 @@
-:root{
-  --green:#2da56a;
-  --muted:#9aa0a6;
-  --card-shadow: 0 20px 40px rgba(17,24,39,0.06);
-  --soft-shadow: 0 12px 30px rgba(3,10,18,0.06);
+:root {
+  --green: #2da56a;
+  --muted: #9aa0a6;
+  --card-shadow: 0 20px 40px rgba(17, 24, 39, 0.06);
+  --soft-shadow: 0 12px 30px rgba(3, 10, 18, 0.06);
   --radius: 22px;
   --body-bg: #ffffff;
 }
 
-*{box-sizing:border-box}
-body{
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Arial, sans-serif !important;
   background: var(--body-bg);
   color: #111827;
-  margin:0;
-  -webkit-font-smoothing:antialiased;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 * {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Arial, sans-serif !important;
 }
 
 /* HEADER */
-.site-header{
+.site-header {
   background: #fff;
-  border-bottom: 1px solid rgba(15,23,42,0.04);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
   height: 10vh;
 }
-.brand{ color:#0b0b0b; }
-.brand span{ color:var(--green); }
-
-.nav-link{
-  color:#111827;
-  opacity:0.9;
-  font-weight:500;
+.brand {
+  color: #0b0b0b;
 }
-.nav-link.active{ color:var(--green); }
+.brand span {
+  color: var(--green);
+}
+
+.nav-link {
+  color: #111827;
+  opacity: 0.9;
+  font-weight: 500;
+}
+.nav-link.active {
+  color: var(--green);
+}
 
 /* login button */
-.btn-login{
+.btn-login {
   background: var(--green);
-  color:#fff;
+  color: #fff;
   border-radius: 24px;
   padding: 8px 18px;
   border: none;
-  font-weight:600;
+  font-weight: 600;
 }
 
 /* botón Siguiente específico */
-.btn-next{
+.btn-next {
   background: var(--green);
   color: #fff;
   padding: 10px 24px;
@@ -56,7 +66,7 @@ body{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(45,165,106,0.12);
+  box-shadow: 0 10px 30px rgba(45, 165, 106, 0.12);
   border: none;
 }
 
@@ -70,66 +80,73 @@ body{
 }
 
 /* responsive: ocupar ancho en móviles */
-@media (max-width: 575.98px){
-  .btn-next { width: 100%; max-width: 360px; }
+@media (max-width: 575.98px) {
+  .btn-next {
+    width: 100%;
+    max-width: 360px;
+  }
 }
 
 /* MAIN */
-.main-content{ padding-bottom: 40px; }
+.main-content {
+  padding-bottom: 40px;
+}
 
 /* PROGRESS STEPS */
-.progress-steps{
-  position:relative;
+.progress-steps {
+  position: relative;
   padding: 18px 0 10px;
 }
 
-.progress-steps .step{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  flex:1;
-  position:relative;
+.progress-steps .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
 }
 
-.progress-steps .line{
-  height:2px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03));
+.progress-steps .line {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.03));
   flex: 0 0 230px; /* aumentado de 70px a 140px para hacer la línea más larga */
   margin: 0 18px;
-  border-radius:2px;
-  align-self:center;
+  border-radius: 2px;
+  align-self: center;
 }
 
 .progress-steps .line.active {
-  background: linear-gradient(90deg, var(--green), rgba(45,165,106,0.7));
-  box-shadow: 0 6px 18px rgba(45,165,106,0.12);
+  background: linear-gradient(90deg, var(--green), rgba(45, 165, 106, 0.7));
+  box-shadow: 0 6px 18px rgba(45, 165, 106, 0.12);
   border-radius: 4px;
   margin: 0 18px;
   flex: 0 0 230px; /* mantener el mismo ancho cuando está activa */
 }
 
-.progress-steps .dot{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-  background:#efefef;
-  border:2px solid rgba(0,0,0,0.06);
-  margin-bottom:10px;
+.progress-steps .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #efefef;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;
 }
 
-.progress-steps .step.active .dot{
-  background:var(--green);
-  border-color:var(--green);
-  box-shadow: 0 6px 18px rgba(45,165,106,0.18);
+.progress-steps .step.active .dot {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 6px 18px rgba(45, 165, 106, 0.18);
 }
 
-.progress-steps .label{
-  font-size:1.05rem;
-  color:#6b7280;
-  margin-top:6px;
+.progress-steps .label {
+  font-size: 1.05rem;
+  color: #6b7280;
+  margin-top: 6px;
 }
 
-.progress-steps .label.muted{ color:#a3a3a8; }
+.progress-steps .label.muted {
+  color: #a3a3a8;
+}
 
 .progress-steps .step.active .label {
   color: var(--green);
@@ -137,24 +154,26 @@ body{
 }
 
 /* UPLOAD CARD */
-.upload-card{
+.upload-card {
   background: #fff;
   border-radius: 28px;
   box-shadow: var(--card-shadow);
   padding: 36px 36px;
-  border: 1px solid rgba(12,18,23,0.03);
+  border: 1px solid rgba(12, 18, 23, 0.03);
 }
 
-.card-title{ font-size:1.85rem; }
+.card-title {
+  font-size: 1.85rem;
+}
 
 /* DROPZONE BOX */
-.dropzone{
-  height:180px;
+.dropzone {
+  height: 180px;
   border-radius: 16px;
-  border: 2px dashed rgba(140,152,170,0.25);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  border: 2px dashed rgba(140, 152, 170, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fafafb;
   margin: 0 auto;
   width: 100%;
@@ -163,85 +182,122 @@ body{
 }
 
 /* simple upload icon */
-.upload-icon{
-  font-size:48px;
-  color:#4b5563;
-  opacity:0.95;
+.upload-icon {
+  font-size: 48px;
+  color: #4b5563;
+  opacity: 0.95;
 }
 
 /* FOOTER */
-.site-footer{
-  position:relative;
-  overflow:hidden;
-  margin-top:80px;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,255,250,0.6) 60%);
-  color:#0f1720;
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 255, 250, 0.6) 60%
+  );
+  color: #0f1720;
 }
 
 /* footer content */
-.brand-footer{ color:#0b0b0b; }
-.footer-desc{ max-width:420px; color:#6b7280; }
+.brand-footer {
+  color: #0b0b0b;
+}
+.footer-desc {
+  max-width: 420px;
+  color: #6b7280;
+}
 
 /* right links */
-.footer-links li{ margin-bottom:8px; }
-.footer-links a{ color:#111827; text-decoration:none; font-weight:500; }
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 500;
+}
 
 /* social icons */
-.socials .social{
-  display:inline-block;
-  margin-left:8px;
-  color:var(--green);
-  text-decoration:none;
-  font-weight:700;
+.socials .social {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 /* separator */
-.footer-sep{
+.footer-sep {
   border: none;
-  height:1px; 
-  background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02));
-  margin-top:22px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.02));
+  margin-top: 22px;
 }
 
 /* decorative footer background: usamos la imagen subida como textura,
    la ruta local que usaste: /mnt/data/Subir apunte 1 desktop.jpg */
-.footer-bg{
-  position:absolute;
-  left:-10%;
-  bottom:-20%;
-  width:70%;
-  height:60%;
-  background-image: url('/mnt/data/Subir apunte 1 desktop.jpg');
+.footer-bg {
+  position: absolute;
+  left: -10%;
+  bottom: -20%;
+  width: 70%;
+  height: 60%;
+  background-image: url("/mnt/data/Subir apunte 1 desktop.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(26px) saturate(0.8) brightness(0.9);
   opacity: 0.55;
   transform: rotate(-6deg) scale(1.05);
-  z-index:0;
-  pointer-events:none;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* asegurar que el contenido del footer esté encima */
-.site-footer > .container{ position:relative; z-index:2; }
+.site-footer > .container {
+  position: relative;
+  z-index: 2;
+}
 
 /* RESPONSIVE */
-@media (max-width: 767px){
-  .nav{ display:none !important; }
-  .progress-steps .line{ display:none; }
-  .progress-steps .step{ flex: 1 0 auto; }
-  .dropzone{ height:160px; }
-  .card-title{ font-size:1.5rem; }
-  .footer-links{ display:none; }
+@media (max-width: 767px) {
+  .nav {
+    display: none !important;
+  }
+  .progress-steps .line {
+    display: none;
+  }
+  .progress-steps .step {
+    flex: 1 0 auto;
+  }
+  .dropzone {
+    height: 160px;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .footer-links {
+    display: none;
+  }
 }
-.form-left .file-badge { font-size:1rem; }
-    .form-label { font-weight:600; }
-    /* evitar overflow inesperado */
-    html,body { overflow-x:hidden; }
+.form-left .file-badge {
+  font-size: 1rem;
+}
+.form-label {
+  font-weight: 600;
+}
+/* evitar overflow inesperado */
+html,
+body {
+  overflow-x: hidden;
+}
 
 /* textarea de descripción: mejor visibilidad placeholder */
 .form-control-description {
   background: #f9fafb;
-  border: 1px solid rgba(45,165,106,0.12);
+  border: 1px solid rgba(45, 165, 106, 0.12);
   padding: 14px 18px;
 }
 
@@ -252,8 +308,8 @@ body{
 
 .form-control-description:focus {
   background: #fff;
-  border-color: rgba(45,165,106,0.22);
-  box-shadow: 0 8px 20px rgba(45,165,106,0.08);
+  border-color: rgba(45, 165, 106, 0.22);
+  box-shadow: 0 8px 20px rgba(45, 165, 106, 0.08);
 }
 
 /* estilos específicos para subirApunteDetalle.html -> que coincidan con la imagen */
@@ -261,18 +317,20 @@ body{
   background: #fff;
   border-radius: 22px;
   padding: 36px;
-  box-shadow: 0 30px 60px rgba(3,10,18,0.06);
-  border: 1px solid rgba(12,18,23,0.04);
+  box-shadow: 0 30px 60px rgba(3, 10, 18, 0.06);
+  border: 1px solid rgba(12, 18, 23, 0.04);
 }
 
 /* izquierda: preview grande */
-.form-left .file-badge { display:none; } /* ocultamos badge pequeño si usamos preview grande */
+.form-left .file-badge {
+  display: none;
+} /* ocultamos badge pequeño si usamos preview grande */
 .form-left .preview-box {
   width: 100%;
   height: 320px;
   border-radius: 14px;
   background: #dbeee2; /* tono verdoso como en la imagen */
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 /* inputs con forma tipo "pill" y altura consistente */
@@ -282,8 +340,8 @@ body{
   height: 48px;
   padding: 10px 18px;
   background: #ffffff;
-  border: 1px solid rgba(12,18,23,0.06);
-  box-shadow: 0 6px 18px rgba(3,10,18,0.03);
+  border: 1px solid rgba(12, 18, 23, 0.06);
+  box-shadow: 0 6px 18px rgba(3, 10, 18, 0.03);
 }
 
 /* textarea - apariencia más clara para placeholder (ya aplicada pero reforzamos) */
@@ -299,15 +357,30 @@ body{
   max-width: 720px;
   margin: 0 auto 18px;
 }
-.progress-steps .line { flex: 0 0 300px; margin: 0 28px; height: 4px; }
-.progress-steps .dot { width: 16px; height: 16px; margin-bottom: 8px; border-width: 3px; }
-.progress-steps .step .label { margin-top:6px; font-weight:600; color:#6b7280; }
+.progress-steps .line {
+  flex: 0 0 300px;
+  margin: 0 28px;
+  height: 4px;
+}
+.progress-steps .dot {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 8px;
+  border-width: 3px;
+}
+.progress-steps .step .label {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #6b7280;
+}
 
 /* fila de botones inferior: Volver a la izquierda y Siguiente a la derecha como en la imagen */
-.action-row { margin-top: 28px; }
+.action-row {
+  margin-top: 28px;
+}
 .btn-back {
   background: transparent;
-  color:var(--green);
+  color: var(--green);
   border: 1px solid var(--green);
   padding: 10px 28px;
   box-shadow: none;
@@ -317,20 +390,129 @@ body{
   color: #fff;
   padding: 10px 34px;
   border-radius: 28px;
-  box-shadow: 0 12px 36px rgba(45,165,106,0.12);
+  box-shadow: 0 12px 36px rgba(45, 165, 106, 0.12);
   border: none;
 }
 
 /* responsive: mantener estructura en móvil pero más compacta */
 @media (max-width: 767.98px) {
-  .upload-form { padding: 22px; }
-  .form-left .preview-box { height: 220px; border-radius: 12px; }
-  .upload-form .form-control, .upload-form .form-select { height: 44px; padding: 8px 14px; }
-  .progress-steps .line { display: none; } /* misma que interfaz: ocultar líneas en móvil para simplicidad */
-  .action-row { flex-direction: row; gap: 12px; }
-  .btn-back { padding: 8px 18px; }
-  .btn-next { padding: 8px 20px; min-width: 140px; }
+  .upload-form {
+    padding: 22px;
+  }
+  .form-left .preview-box {
+    height: 220px;
+    border-radius: 12px;
+  }
+  .upload-form .form-control,
+  .upload-form .form-select {
+    height: 44px;
+    padding: 8px 14px;
+  }
+  .progress-steps .line {
+    display: none;
+  } /* misma que interfaz: ocultar líneas en móvil para simplicidad */
+  .action-row {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .btn-back {
+    padding: 8px 18px;
+  }
+  .btn-next {
+    padding: 8px 20px;
+    min-width: 140px;
+  }
 }
 
 /* small tweaks para que la tarjeta quede centrada y aspecto idéntico */
-.row.justify-content-center > .col-11.col-md-10 { max-width: 980px; margin: 0 auto; }
+.row.justify-content-center > .col-11.col-md-10 {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* CARD estilo Figma */
+.upload-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 48px 56px;
+  box-shadow: 0 20px 40px rgba(17, 24, 39, 0.06);
+  border: 1px solid rgba(12, 18, 23, 0.03);
+}
+
+/* TITULO */
+.upload-card .card-title {
+  font-size: 1.9rem;
+  margin-bottom: 32px;
+}
+
+/* DROPZONE */
+.dropzone {
+  width: 100%;
+  max-width: 620px;
+  height: 220px;
+  border-radius: 16px;
+  border: 2px dashed rgba(140, 152, 170, 0.25);
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 15px 30px rgba(3, 10, 18, 0.06);
+}
+
+.dz-inner {
+  text-align: center;
+}
+
+.upload-icon {
+  font-size: 52px;
+  color: #555;
+  opacity: 0.9;
+}
+
+.dz-text {
+  margin: 12px 0 8px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* BOTÓN Buscar archivo */
+.btn-dz {
+  background: var(--green);
+  border: none;
+  padding: 8px 26px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* BOTÓN SIGUIENTE */
+.btn-next {
+  background: var(--green);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 28px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 12px 30px rgba(45, 165, 106, 0.2);
+}
+.main-content {
+  min-height: 100vh; /* garantiza el espacio completo */
+  padding-top: 140px; /* baja todo para que no se superponga con header */
+}
+
+.upload-section {
+  padding-bottom: 120px; /* evita que se corte antes del footer */
+}
+
+.upload-card {
+  position: relative; /* asegura que no se recorta */
+  z-index: 2;
+}
+
+body,
+html {
+  height: auto !important;
+  overflow-x: hidden;
+}
