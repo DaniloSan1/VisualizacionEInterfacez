@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscar - Apunti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estiloHome.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container search-container-top">
+    
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-clean">
+        <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Buscar Material</li>
+      </ol>
+    </nav>
+
+    <div class="filter-pill-wrapper">
+      <div class="filter-group">
+        <select class="form-select border-0 shadow-none bg-transparent">
+          <option selected>Departamento</option>
+          <option>Ingeniería</option>
+          <option>Humanidades</option>
+        </select>
+        <div class="divider"></div>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-select border-0 shadow-none bg-transparent">
+          <option selected>Carrera</option>
+          <option>Diseño Gráfico</option>
+          <option>Desarrollo Web</option>
+        </select>
+        <div class="divider"></div>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-select border-0 shadow-none bg-transparent">
+          <option selected>Materia</option>
+          <option>UX/UI</option>
+          <option>Programación I</option>
+        </select>
+        <div class="divider"></div>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-select border-0 shadow-none bg-transparent">
+          <option selected>Comision</option>
+          <option>C1</option>
+          <option>C2</option>
+        </select>
+        <div class="divider"></div>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-select border-0 shadow-none bg-transparent">
+          <option selected>Tipo de Material</option>
+          <option>Apunte</option>
+          <option>Resumen</option>
+        </select>
+      </div>
+
+      <a href="searchResults.html" class="btn btn-filter-search text-decoration-none">Buscar</a>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="empty-search-state">
+      
+      <div class="empty-icon-circle">
+        <img src="https://img.icons8.com/ios/100/3f9b7b/search--v1.png" alt="Buscar">
+      </div>
+      
+      <h3>¿Qué estás buscando hoy?</h3>
+      <p>Seleccioná los filtros de arriba para encontrar apuntes, resúmenes y parciales organizados por materia.</p>
+      
+    </div>
+  </div>
+
+
+    <div id="footer-placeholder"></div>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components-loader.js"></script>
+</body>
+</html>
