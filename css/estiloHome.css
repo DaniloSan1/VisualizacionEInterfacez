@@ -70,7 +70,24 @@ header, .site-header {
   transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(63,155,123,0.12);
 }
-.btn-login:hover{ background-color: #2da56a; transform: translateY(-2px); color: #fff; }
+
+.btn-login-back{
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+  border-radius:30px;
+  padding:8px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-login-back:hover{
+  background-color: var(--green);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-login:hover{ background-color:var(--green-dark); transform: translateY(-2px); color: #fff; }
 
 .hero-wrapper {
     margin-top: 130px; 
@@ -139,7 +156,7 @@ header, .site-header {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(63, 155, 123, 0.4);
 }
-.btn-hero:hover { background-color: #2da56a; transform: translateY(-2px); color: #fff; }
+.btn-hero:hover { background-color: var(--green-dark); transform: translateY(-2px); color: #fff; }
 
 .usage-title { margin-top: 80px; color: #2da56a; font-size: 2rem; font-weight: 600; text-align: center; }
 .usage-subtitle { text-align: center; max-width: 650px; margin: 15px auto 50px; color: #555; }
@@ -210,7 +227,7 @@ header, .site-header {
 .filter-group:last-of-type .divider { display: none; }
 
 .btn-filter-search {
-  background: #3f9b7b; color: white; border-radius: 50px; padding: 10px 32px; font-weight: 600; border: none; transition: all 0.2s;
+  background: var(--green-dark); color: white; border-radius: 50px; padding: 10px 32px; font-weight: 600; border: none; transition: all 0.2s;
 }
 .btn-filter-search:hover { background: #2da56a; color: white; transform: translateY(-1px); }
 

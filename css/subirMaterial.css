@@ -182,7 +182,7 @@
   margin-bottom: 12px;
 }
 .btn-upload-green {
-  background-color: #4ca986;
+  background-color: var(--green);
   color: white;
   border: none;
   padding: 7px 24px;
@@ -195,7 +195,9 @@
   transition: background 0.2s;
 }
 .btn-upload-green:hover {
-  background-color: #3f9b7b;
+  background-color: var(--green-dark);
+  transform: translateY(-2px);
+  color: #fff;
 }
 
 /* =========================================
@@ -317,8 +319,15 @@
   font-size: 0.9rem;
   background: transparent;
 }
+
+.btn-back-outline {
+ background-color: var(--green);
+ color: white;
+ transform: translateY(-2px);
+}
+
 .btn-next-green {
-  background-color: #4ca986;
+  background-color: var(--green);
   color: white;
   border: none;
   padding: 6px 30px;

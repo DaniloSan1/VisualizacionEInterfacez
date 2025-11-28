@@ -222,9 +222,9 @@
 }
 
 .btn-register-primary:hover {
-  background: var(--green-dark, #397f63);
+   background-color: var(--green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(63, 155, 123, 0.32);
+  color: #fff;
 }
 
 .login-link {

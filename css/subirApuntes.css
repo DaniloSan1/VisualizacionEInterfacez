@@ -127,10 +127,10 @@
 .dropzone-text { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
 
 .btn-upload-green {
-  background-color: #4ca986; color: white; border: none; padding: 7px 24px;
+  background-color: var(--green); color: white; border: none; padding: 7px 24px;
   border-radius: 50px; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;
 }
-.btn-upload-green:hover { background-color: #3f9b7b; }
+.btn-upload-green:hover { background-color: var(--green-dark); transform: translateY(-2px); }
 
 /* FOOTER STICKY */
 footer.site-footer {

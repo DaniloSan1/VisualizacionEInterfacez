@@ -167,7 +167,7 @@
 
 /* Botón Descargar */
 .btn-download-large {
-  background-color: #2da56a;
+  background-color: var(--green);
   color: #fff;
   border: none;
   padding: 12px 40px;
@@ -175,11 +175,11 @@
   font-weight: 600;
   font-size: 1.1rem;
   box-shadow: 0 10px 25px rgba(45, 165, 106, 0.25);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-download-large:hover {
-  background-color: #248c58;
+  background-color: var(--green-dark);
   transform: translateY(-2px);
   color: #fff;
 }
