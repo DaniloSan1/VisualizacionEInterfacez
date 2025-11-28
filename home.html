@@ -16,28 +16,7 @@
 <body>
 
 <!-- NAV -->
-<header class="top-nav">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center gap-3">
-      <a href="home.html" class="brand-logo">
-        <img src="images/Apunti.png" alt="Apunti" class="logo-img">
-      </a>
-    </div>
-
-    <nav class="d-none d-md-flex align-items-center gap-4">
-      <a class="nav-link" href="home.html">Inicio</a>
-      <a class="nav-link" href="searchResults.html">Buscar material</a>
-      <a class="nav-link" href="subirApuntes.html">Subir material</a>
-      <a class="nav-link" href="perfil.html">Mi perfil</a>
-      <a href="login.html" class="btn btn-login text-decoration-none">Iniciar Sesión</a>
-    </nav>
-
-    <!-- mobile toggle -->
-    <div class="d-md-none">
-      <button class="btn btn-outline-secondary btn-sm"> ☰ </button>
-    </div>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 
 <!-- HERO -->
 <div class="container hero-container">
@@ -57,17 +36,18 @@
 <!-- COMO USAR -->
 <h2 class="usage-title">Cómo usar la plataforma</h2>
 <p class="usage-subtitle">
-    Acá todo es simple: primero aportás, después accedés. La idea es construir una biblioteca que sirva
-    para todos los que cursan como vos.
+    Acá todo es simple: primero aportás, después accedés. <br>
+    La idea es construir una biblioteca que sirva para todos los que cursan como vos.
 </p>
 
 <div class="container mt-4">
-    <div class="row g-4">
+    <div class="row g-4 usage-cards-grid">
+
         <div class="col-md-3">
             <div class="usage-card">
                 <img src="https://img.icons8.com/ios-glyphs/60/user.png">
                 <h4>Registrate</h4>
-                <p>Creás tu cuenta con tu mail estudiantil en cuestión de segundos para visualizar tus aportes.</p>
+                <p>Solo necesitás registrarte usando tu mail de estudiante. Con eso ya podés empezar a ver y compartir apuntes sin complicaciones.</p>
             </div>
         </div>
 
@@ -75,7 +55,7 @@
             <div class="usage-card">
                 <img src="https://img.icons8.com/ios-glyphs/60/search--v1.png">
                 <h4>Buscá el material</h4>
-                <p>Elegí Departamento → Carrera → Materia → Cátedra y encontrá material específico para tu cursada.</p>
+                <p>Elegí tu Departamento, Carrera, Materia, Cátedra y Tipo para acceder a material que realmente coincide con tu cursada.</p>
             </div>
         </div>
 
@@ -83,50 +63,23 @@
             <div class="usage-card">
                 <img src="https://img.icons8.com/ios-glyphs/60/upload.png">
                 <h4>Subí tu aporte</h4>
-                <p>Para descargar, solo tenés que compartir un material tuyo. No tiene que ser perfecto, solo útil.</p>
+                <p>No hace falta que sea perfecto, lo importante es que ayuden a alguien más y que vos también desbloquees contenido.</p>
             </div>
         </div>
-
-        <div class="col-md-3">
+  <div class="col-md-3">
             <div class="usage-card">
                 <img src="https://img.icons8.com/ios-glyphs/60/happy.png">
                 <h4>A estudiar!</h4>
-                <p>Encontrá el material justo para tu materia y cátedra, sin confusiones ni mezclado.</p>
+                <p>Sin mezclas raras, sin info desactualizada. Solo contenido real de estudiantes que cursaron lo mismo que vos.</p>
             </div>
         </div>
+
     </div>
 </div>
+<!-- Footer modular -->
+  <div id="footer-placeholder"></div>
+  <script src="js/components-loader.js"></script>
 
-<!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start gap-4">
-      <div>
-        <a href="home.html" class="footer-logo-link">
-          <img src="images/Apunti.png" alt="Apunti" class="logo-img">
-        </a>
-         <p class="footer-mini">Encontrá apuntes, resúmenes y parciales organizados por carrera, materia y cátedra.
-         Para ver, también tenés que aportar. Acá la idea es compartir, no acumular.</p>
-       </div>
-
-       <div class="d-flex gap-4 align-items-start">
-        <div class="footer-links-and-social d-flex flex-column align-items-end">
-          <div class="d-none d-md-block">
-            <ul class="list-unstyled footer-links-inline">
-              <li><a href="home.html" class="text-decoration-none">Inicio</a></li>
-              <li><a href="searchResults.html" class="text-decoration-none">Buscar apuntes</a></li>
-              <li><a href="subirApuntes.html" class="text-decoration-none">Subir aporte</a></li>
-              <li><a href="perfil.html" class="text-decoration-none">Mi perfil</a></li>
-            </ul>
-          </div>
-
-          <!-- social debajo de los links -->
-          <div class="footer-social-wrap mt-3 mt-md-2">
-            <img src="images/footer.png" alt="Redes sociales" class="footer-social-img">
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="js/components-loader.js"></script>
 </body>
 </html>
